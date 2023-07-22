@@ -1,0 +1,3456 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d4cadb6c9df8e2a931f15324f83acd76 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d4cadb6c9df8e2a931f15324f83acd76" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d4cadb6c9df8e2a931f15324f83acd76 = L.map(
+                "map_d4cadb6c9df8e2a931f15324f83acd76",
+                {
+                    center: [42.9832406, -81.243372],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 3,
+                    zoomControl: true,
+                    preferCanvas: true,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c301eb5aec70e8b24dc4361913085cb8 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca target=\"_blank\" href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_d4cadb6c9df8e2a931f15324f83acd76);
+        
+    
+            var feature_group_732878fde81f35a5bdbb8a58f18c8f40 = L.featureGroup(
+                {}
+            ).addTo(map_d4cadb6c9df8e2a931f15324f83acd76);
+        
+    
+            var marker_292fddcf4071e34b4ff855314cf77b4e = L.marker(
+                [46.603354, 1.8883335],
+                {"radius": 2}
+            ).addTo(feature_group_732878fde81f35a5bdbb8a58f18c8f40);
+        
+    
+            var icon_b77d654a62a9353f3c00aa2f4bb64f28 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_292fddcf4071e34b4ff855314cf77b4e.setIcon(icon_b77d654a62a9353f3c00aa2f4bb64f28);
+        
+    
+        var popup_5f7d18dd22f85e1c998f5085080b4d1b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1963effe2055e3af101287510c34b2b0 = $(`<div id="html_1963effe2055e3af101287510c34b2b0" style="width: 100.0%; height: 100.0%;"><a href=https://www.instagram.com/stories/highlights/18105311668102083>France</a></div>`)[0];
+                popup_5f7d18dd22f85e1c998f5085080b4d1b.setContent(html_1963effe2055e3af101287510c34b2b0);
+            
+        
+
+        marker_292fddcf4071e34b4ff855314cf77b4e.bindPopup(popup_5f7d18dd22f85e1c998f5085080b4d1b)
+        ;
+
+        
+    
+    
+            var marker_36b5f2f889e7484c21804a8d130ca271 = L.marker(
+                [52.24764975, 5.541246849406163],
+                {"radius": 2}
+            ).addTo(feature_group_732878fde81f35a5bdbb8a58f18c8f40);
+        
+    
+            var icon_915f99d099165b55f3ca49dab39039d7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_36b5f2f889e7484c21804a8d130ca271.setIcon(icon_915f99d099165b55f3ca49dab39039d7);
+        
+    
+        var popup_1e903d680b9910bb24147e2ad834a4be = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_54cbc87a88777c1f9bc97854b426b057 = $(`<div id="html_54cbc87a88777c1f9bc97854b426b057" style="width: 100.0%; height: 100.0%;"><a href=https://www.instagram.com/stories/highlights/17855059105508769>The Netherlands</a></div>`)[0];
+                popup_1e903d680b9910bb24147e2ad834a4be.setContent(html_54cbc87a88777c1f9bc97854b426b057);
+            
+        
+
+        marker_36b5f2f889e7484c21804a8d130ca271.bindPopup(popup_1e903d680b9910bb24147e2ad834a4be)
+        ;
+
+        
+    
+    
+            var marker_fe0e3cb7110e7a0d837d95f64f57e4ec = L.marker(
+                [52.215933, 19.134422],
+                {"radius": 2}
+            ).addTo(feature_group_732878fde81f35a5bdbb8a58f18c8f40);
+        
+    
+            var icon_37aaaa389239b228d4ecf42428388d7b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_fe0e3cb7110e7a0d837d95f64f57e4ec.setIcon(icon_37aaaa389239b228d4ecf42428388d7b);
+        
+    
+        var popup_3929fd6954dcd21f15cea0b72d793837 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_503f9c8dae1eb322bee81166793e1ae3 = $(`<div id="html_503f9c8dae1eb322bee81166793e1ae3" style="width: 100.0%; height: 100.0%;"><a href=https://www.instagram.com/stories/highlights/17986380842127357>Poland</a></div>`)[0];
+                popup_3929fd6954dcd21f15cea0b72d793837.setContent(html_503f9c8dae1eb322bee81166793e1ae3);
+            
+        
+
+        marker_fe0e3cb7110e7a0d837d95f64f57e4ec.bindPopup(popup_3929fd6954dcd21f15cea0b72d793837)
+        ;
+
+        
+    
+    
+            var marker_98bcb79556af8fb2ed35933f81700d11 = L.marker(
+                [51.1638175, 10.4478313],
+                {"radius": 2}
+            ).addTo(feature_group_732878fde81f35a5bdbb8a58f18c8f40);
+        
+    
+            var icon_0339716dd2779f1af97a072619b61918 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_98bcb79556af8fb2ed35933f81700d11.setIcon(icon_0339716dd2779f1af97a072619b61918);
+        
+    
+        var popup_f12d7a9434800d61c67acb88f8a872ae = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d175908774583d696a59524ac9e0ec68 = $(`<div id="html_d175908774583d696a59524ac9e0ec68" style="width: 100.0%; height: 100.0%;"><a href=https://www.instagram.com/stories/highlights/17971101526565051>Germany</a></div>`)[0];
+                popup_f12d7a9434800d61c67acb88f8a872ae.setContent(html_d175908774583d696a59524ac9e0ec68);
+            
+        
+
+        marker_98bcb79556af8fb2ed35933f81700d11.bindPopup(popup_f12d7a9434800d61c67acb88f8a872ae)
+        ;
+
+        
+    
+    
+            var marker_8ccca67ed1a094751b40ebacf1b2501e = L.marker(
+                [59.6749712, 14.5208584],
+                {"radius": 2}
+            ).addTo(feature_group_732878fde81f35a5bdbb8a58f18c8f40);
+        
+    
+            var icon_01e19a4e3669679e92d637b6891f8c29 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_8ccca67ed1a094751b40ebacf1b2501e.setIcon(icon_01e19a4e3669679e92d637b6891f8c29);
+        
+    
+        var popup_64a8f5a0cbe58be4d61db64bfe4fcb00 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c697ebe05d3bc8a009022d8ed52970b5 = $(`<div id="html_c697ebe05d3bc8a009022d8ed52970b5" style="width: 100.0%; height: 100.0%;"><a href=https://www.instagram.com/stories/highlights/17884404992265173>Sweden</a></div>`)[0];
+                popup_64a8f5a0cbe58be4d61db64bfe4fcb00.setContent(html_c697ebe05d3bc8a009022d8ed52970b5);
+            
+        
+
+        marker_8ccca67ed1a094751b40ebacf1b2501e.bindPopup(popup_64a8f5a0cbe58be4d61db64bfe4fcb00)
+        ;
+
+        
+    
+    
+            var marker_92c090ee24b0c3f58082e54fad64d6c9 = L.marker(
+                [47.59397, 14.12456],
+                {"radius": 2}
+            ).addTo(feature_group_732878fde81f35a5bdbb8a58f18c8f40);
+        
+    
+            var icon_d44d0f85a0360894af588b6a630fc96d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_92c090ee24b0c3f58082e54fad64d6c9.setIcon(icon_d44d0f85a0360894af588b6a630fc96d);
+        
+    
+        var popup_6eabc23585218afcb022f3dff749c710 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2b027290f95bc0009802c47857b077dd = $(`<div id="html_2b027290f95bc0009802c47857b077dd" style="width: 100.0%; height: 100.0%;"><a href=https://www.instagram.com/stories/highlights/17988632116707490>Austria</a></div>`)[0];
+                popup_6eabc23585218afcb022f3dff749c710.setContent(html_2b027290f95bc0009802c47857b077dd);
+            
+        
+
+        marker_92c090ee24b0c3f58082e54fad64d6c9.bindPopup(popup_6eabc23585218afcb022f3dff749c710)
+        ;
+
+        
+    
+    
+            var marker_fe7dd738627eeb4de256a119097f59aa = L.marker(
+                [63.2467777, 25.9209164],
+                {"radius": 2}
+            ).addTo(feature_group_732878fde81f35a5bdbb8a58f18c8f40);
+        
+    
+            var icon_0f886c28ed1994e96ecdb07d8ddf1d9c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_fe7dd738627eeb4de256a119097f59aa.setIcon(icon_0f886c28ed1994e96ecdb07d8ddf1d9c);
+        
+    
+        var popup_38dc50e5050ecc84f001a181fa84380b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a0a48c903a2df720101c1623c1973b20 = $(`<div id="html_a0a48c903a2df720101c1623c1973b20" style="width: 100.0%; height: 100.0%;"><a href=https://www.instagram.com/stories/highlights/18077403805196927>Finland</a></div>`)[0];
+                popup_38dc50e5050ecc84f001a181fa84380b.setContent(html_a0a48c903a2df720101c1623c1973b20);
+            
+        
+
+        marker_fe7dd738627eeb4de256a119097f59aa.bindPopup(popup_38dc50e5050ecc84f001a181fa84380b)
+        ;
+
+        
+    
+    
+            var marker_67b60bfe6465675ccb8e77b079430372 = L.marker(
+                [-28.8166236, 24.991639],
+                {"radius": 2}
+            ).addTo(feature_group_732878fde81f35a5bdbb8a58f18c8f40);
+        
+    
+            var icon_0ccc2629263d69cb04401f02508fa7d0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_67b60bfe6465675ccb8e77b079430372.setIcon(icon_0ccc2629263d69cb04401f02508fa7d0);
+        
+    
+        var popup_7167ff2ea3fa083c218dc57cc05feb39 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0dfecde85c760dc39b842ffc8cd65c37 = $(`<div id="html_0dfecde85c760dc39b842ffc8cd65c37" style="width: 100.0%; height: 100.0%;"><a href=https://www.instagram.com/stories/highlights/18327333379063576>South-Africa</a></div>`)[0];
+                popup_7167ff2ea3fa083c218dc57cc05feb39.setContent(html_0dfecde85c760dc39b842ffc8cd65c37);
+            
+        
+
+        marker_67b60bfe6465675ccb8e77b079430372.bindPopup(popup_7167ff2ea3fa083c218dc57cc05feb39)
+        ;
+
+        
+    
+    
+            var marker_7f75583c81d69b202ad9ba83923a9702 = L.marker(
+                [52.5310214, -1.2649062],
+                {"radius": 2}
+            ).addTo(feature_group_732878fde81f35a5bdbb8a58f18c8f40);
+        
+    
+            var icon_163b4e2b431ceeeb3c5dc38f55b96fe7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_7f75583c81d69b202ad9ba83923a9702.setIcon(icon_163b4e2b431ceeeb3c5dc38f55b96fe7);
+        
+    
+        var popup_a8a66c3951089a01f65161a2200a9982 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7aad469898eaf26af68a739723033e29 = $(`<div id="html_7aad469898eaf26af68a739723033e29" style="width: 100.0%; height: 100.0%;"><a href=https://www.instagram.com/stories/highlights/17957180605967558>England</a></div>`)[0];
+                popup_a8a66c3951089a01f65161a2200a9982.setContent(html_7aad469898eaf26af68a739723033e29);
+            
+        
+
+        marker_7f75583c81d69b202ad9ba83923a9702.bindPopup(popup_a8a66c3951089a01f65161a2200a9982)
+        ;
+
+        
+    
+    
+            var marker_4ce204444336450dbc195d3650fb0435 = L.marker(
+                [23.9739374, 120.9820179],
+                {"radius": 2}
+            ).addTo(feature_group_732878fde81f35a5bdbb8a58f18c8f40);
+        
+    
+            var icon_626e6f0f02aa55b07492d4408b6ee4c0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_4ce204444336450dbc195d3650fb0435.setIcon(icon_626e6f0f02aa55b07492d4408b6ee4c0);
+        
+    
+        var popup_60beb5b6cc6dd31a15efe255cb0ffa43 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8a254f9c751c2089d03573f3a94e2a0a = $(`<div id="html_8a254f9c751c2089d03573f3a94e2a0a" style="width: 100.0%; height: 100.0%;"><a href=https://www.instagram.com/stories/highlights/18043642861153945>Taiwan</a></div>`)[0];
+                popup_60beb5b6cc6dd31a15efe255cb0ffa43.setContent(html_8a254f9c751c2089d03573f3a94e2a0a);
+            
+        
+
+        marker_4ce204444336450dbc195d3650fb0435.bindPopup(popup_60beb5b6cc6dd31a15efe255cb0ffa43)
+        ;
+
+        
+    
+    
+            var marker_23c8a0d3e4c763c0f6e9fbe97dff0e0e = L.marker(
+                [36.638392, 127.6961188],
+                {"radius": 2}
+            ).addTo(feature_group_732878fde81f35a5bdbb8a58f18c8f40);
+        
+    
+            var icon_92620d101a97615b5c0bec221ae502b9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_23c8a0d3e4c763c0f6e9fbe97dff0e0e.setIcon(icon_92620d101a97615b5c0bec221ae502b9);
+        
+    
+        var popup_194a1fa1c623dc0b6b9102c6ae99988d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6d92904a7a2d56790d4853154bb4ac40 = $(`<div id="html_6d92904a7a2d56790d4853154bb4ac40" style="width: 100.0%; height: 100.0%;"><a href=https://www.instagram.com/stories/highlights/17858260970783815>South-Korea</a></div>`)[0];
+                popup_194a1fa1c623dc0b6b9102c6ae99988d.setContent(html_6d92904a7a2d56790d4853154bb4ac40);
+            
+        
+
+        marker_23c8a0d3e4c763c0f6e9fbe97dff0e0e.bindPopup(popup_194a1fa1c623dc0b6b9102c6ae99988d)
+        ;
+
+        
+    
+    
+            var marker_284d0c709f3c0c2e839d6391ef9b504c = L.marker(
+                [52.2928116, -3.73893],
+                {"radius": 2}
+            ).addTo(feature_group_732878fde81f35a5bdbb8a58f18c8f40);
+        
+    
+            var icon_950ce6e95f26d626c40b0af9aae19306 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_284d0c709f3c0c2e839d6391ef9b504c.setIcon(icon_950ce6e95f26d626c40b0af9aae19306);
+        
+    
+        var popup_c90747c94077697f026c39e3c9de9a28 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_acc7e9795edc032b4875f2b9abe09752 = $(`<div id="html_acc7e9795edc032b4875f2b9abe09752" style="width: 100.0%; height: 100.0%;"><a href=https://www.instagram.com/stories/highlights/18219861757177184>Wales</a></div>`)[0];
+                popup_c90747c94077697f026c39e3c9de9a28.setContent(html_acc7e9795edc032b4875f2b9abe09752);
+            
+        
+
+        marker_284d0c709f3c0c2e839d6391ef9b504c.bindPopup(popup_c90747c94077697f026c39e3c9de9a28)
+        ;
+
+        
+    
+    
+            var marker_5ae076842c3096df4524e98071cd59d1 = L.marker(
+                [58.7523778, 25.3319078],
+                {"radius": 2}
+            ).addTo(feature_group_732878fde81f35a5bdbb8a58f18c8f40);
+        
+    
+            var icon_943ed3b6deaaf566f8e1370eae0af776 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_5ae076842c3096df4524e98071cd59d1.setIcon(icon_943ed3b6deaaf566f8e1370eae0af776);
+        
+    
+        var popup_f14b818174388741c6e301f36aaf069f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6449d1bed6a05354f21db6e84cced953 = $(`<div id="html_6449d1bed6a05354f21db6e84cced953" style="width: 100.0%; height: 100.0%;"><a href=https://www.instagram.com/stories/highlights/17962893301571072>Estonia</a></div>`)[0];
+                popup_f14b818174388741c6e301f36aaf069f.setContent(html_6449d1bed6a05354f21db6e84cced953);
+            
+        
+
+        marker_5ae076842c3096df4524e98071cd59d1.bindPopup(popup_f14b818174388741c6e301f36aaf069f)
+        ;
+
+        
+    
+    
+            var marker_b53ef810c2457c93764942904e2a76f8 = L.marker(
+                [39.3260685, -4.8379791],
+                {"radius": 2}
+            ).addTo(feature_group_732878fde81f35a5bdbb8a58f18c8f40);
+        
+    
+            var icon_d9a48f4744f5daba496565977634efc9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_b53ef810c2457c93764942904e2a76f8.setIcon(icon_d9a48f4744f5daba496565977634efc9);
+        
+    
+        var popup_4f188b6c44e230c347ca21e04beca938 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_78a61479b2a2b883eb40a91aeccd44d3 = $(`<div id="html_78a61479b2a2b883eb40a91aeccd44d3" style="width: 100.0%; height: 100.0%;"><a href=https://www.instagram.com/stories/highlights/17958659380365106>Spain</a></div>`)[0];
+                popup_4f188b6c44e230c347ca21e04beca938.setContent(html_78a61479b2a2b883eb40a91aeccd44d3);
+            
+        
+
+        marker_b53ef810c2457c93764942904e2a76f8.bindPopup(popup_4f188b6c44e230c347ca21e04beca938)
+        ;
+
+        
+    
+    
+            var marker_4d369f80f0de9249f6468d97e33e04f2 = L.marker(
+                [64.9841821, -18.1059013],
+                {"radius": 2}
+            ).addTo(feature_group_732878fde81f35a5bdbb8a58f18c8f40);
+        
+    
+            var icon_fedf4ef312c6a5fb14ae4311f4c97db6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_4d369f80f0de9249f6468d97e33e04f2.setIcon(icon_fedf4ef312c6a5fb14ae4311f4c97db6);
+        
+    
+        var popup_7c2a0e0ce751c98483076ad8771376b7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f13a7f5693a6c36788374d8cd8656547 = $(`<div id="html_f13a7f5693a6c36788374d8cd8656547" style="width: 100.0%; height: 100.0%;"><a href=https://www.instagram.com/stories/highlights/17853544675662499>Iceland</a></div>`)[0];
+                popup_7c2a0e0ce751c98483076ad8771376b7.setContent(html_f13a7f5693a6c36788374d8cd8656547);
+            
+        
+
+        marker_4d369f80f0de9249f6468d97e33e04f2.bindPopup(popup_7c2a0e0ce751c98483076ad8771376b7)
+        ;
+
+        
+    
+    
+            var marker_77ea4ad2b50a08d003e938285b733bdf = L.marker(
+                [49.7439047, 15.3381061],
+                {"radius": 2}
+            ).addTo(feature_group_732878fde81f35a5bdbb8a58f18c8f40);
+        
+    
+            var icon_14c30efd8000cd16e47fe62e3b0d02bf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_77ea4ad2b50a08d003e938285b733bdf.setIcon(icon_14c30efd8000cd16e47fe62e3b0d02bf);
+        
+    
+        var popup_ed872ee7417c0960f99739f26a65138a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2b3dae726e6b4069b8179c4d65712586 = $(`<div id="html_2b3dae726e6b4069b8179c4d65712586" style="width: 100.0%; height: 100.0%;"><a href=https://www.instagram.com/stories/highlights/17846225809921692>Czech Republic</a></div>`)[0];
+                popup_ed872ee7417c0960f99739f26a65138a.setContent(html_2b3dae726e6b4069b8179c4d65712586);
+            
+        
+
+        marker_77ea4ad2b50a08d003e938285b733bdf.bindPopup(popup_ed872ee7417c0960f99739f26a65138a)
+        ;
+
+        
+    
+    
+            var marker_3a2c1ef3bb6fcccfb77c0d1f9b164b44 = L.marker(
+                [39.6621648, -8.1353519],
+                {"radius": 2}
+            ).addTo(feature_group_732878fde81f35a5bdbb8a58f18c8f40);
+        
+    
+            var icon_cb516692db4305e30ad8406dc6049e45 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_3a2c1ef3bb6fcccfb77c0d1f9b164b44.setIcon(icon_cb516692db4305e30ad8406dc6049e45);
+        
+    
+        var popup_b5cbd5e51048c4ac5d3eadff63e7454a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_43208bcfaefc6458bba3d80df03bddbd = $(`<div id="html_43208bcfaefc6458bba3d80df03bddbd" style="width: 100.0%; height: 100.0%;"><a href=https://www.instagram.com/stories/highlights/18088550053108867>Portugal</a></div>`)[0];
+                popup_b5cbd5e51048c4ac5d3eadff63e7454a.setContent(html_43208bcfaefc6458bba3d80df03bddbd);
+            
+        
+
+        marker_3a2c1ef3bb6fcccfb77c0d1f9b164b44.bindPopup(popup_b5cbd5e51048c4ac5d3eadff63e7454a)
+        ;
+
+        
+    
+    
+            var marker_7ab99a573082ea095459646f07f85735 = L.marker(
+                [56.7861112, -4.1140518],
+                {"radius": 2}
+            ).addTo(feature_group_732878fde81f35a5bdbb8a58f18c8f40);
+        
+    
+            var icon_80fab8856afb4066531c4301974e0bc3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_7ab99a573082ea095459646f07f85735.setIcon(icon_80fab8856afb4066531c4301974e0bc3);
+        
+    
+        var popup_310ff4ee39dc3abd92b2500399b8b784 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_25e5f22d3d12dec5ad25349d5b1285ca = $(`<div id="html_25e5f22d3d12dec5ad25349d5b1285ca" style="width: 100.0%; height: 100.0%;"><a href=https://www.instagram.com/stories/highlights/18058240135122286>Scotland</a></div>`)[0];
+                popup_310ff4ee39dc3abd92b2500399b8b784.setContent(html_25e5f22d3d12dec5ad25349d5b1285ca);
+            
+        
+
+        marker_7ab99a573082ea095459646f07f85735.bindPopup(popup_310ff4ee39dc3abd92b2500399b8b784)
+        ;
+
+        
+    
+    
+            var marker_9d153bd5f4ef2526fbf6939842dc037c = L.marker(
+                [47.1817585, 19.5060937],
+                {"radius": 2}
+            ).addTo(feature_group_732878fde81f35a5bdbb8a58f18c8f40);
+        
+    
+            var icon_347a2ff49ce81aea83a1b70caf673920 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_9d153bd5f4ef2526fbf6939842dc037c.setIcon(icon_347a2ff49ce81aea83a1b70caf673920);
+        
+    
+        var popup_5ba021f05da3fc5136047bcca23145cd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0ec31f835c007504bb480624b685efa9 = $(`<div id="html_0ec31f835c007504bb480624b685efa9" style="width: 100.0%; height: 100.0%;"><a href=https://www.instagram.com/stories/highlights/17906049658317008>Hungary</a></div>`)[0];
+                popup_5ba021f05da3fc5136047bcca23145cd.setContent(html_0ec31f835c007504bb480624b685efa9);
+            
+        
+
+        marker_9d153bd5f4ef2526fbf6939842dc037c.bindPopup(popup_5ba021f05da3fc5136047bcca23145cd)
+        ;
+
+        
+    
+    
+            var marker_00a7c826228c9fe81bf03fc75d5f1849 = L.marker(
+                [42.6073975, 25.4856617],
+                {"radius": 2}
+            ).addTo(feature_group_732878fde81f35a5bdbb8a58f18c8f40);
+        
+    
+            var icon_11798be54b7c9b596cdb817b13d5bde7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_00a7c826228c9fe81bf03fc75d5f1849.setIcon(icon_11798be54b7c9b596cdb817b13d5bde7);
+        
+    
+        var popup_6e432d4b7d7a15c0fc5aacc6e6425b68 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8461f3a5d2fbc520966cbc94580f62d0 = $(`<div id="html_8461f3a5d2fbc520966cbc94580f62d0" style="width: 100.0%; height: 100.0%;"><a href=https://www.instagram.com/stories/highlights/18001376674139436>Bulgaria</a></div>`)[0];
+                popup_6e432d4b7d7a15c0fc5aacc6e6425b68.setContent(html_8461f3a5d2fbc520966cbc94580f62d0);
+            
+        
+
+        marker_00a7c826228c9fe81bf03fc75d5f1849.bindPopup(popup_6e432d4b7d7a15c0fc5aacc6e6425b68)
+        ;
+
+        
+    
+    
+            var feature_group_c1bf3790a7a59a845c8c8bbc897a0c30 = L.featureGroup(
+                {}
+            ).addTo(map_d4cadb6c9df8e2a931f15324f83acd76);
+        
+    
+            var circle_marker_076936e4295b6639fa6468ef3d3f2ddb = L.circleMarker(
+                [42.9832406, -81.243372],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_076936e4295b6639fa6468ef3d3f2ddb.bindTooltip(
+                `<div>
+                     <b>London, Canada (2017)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_df213792632d9e05beea74d297d12b20 = L.circleMarker(
+                [43.1065603, -79.0639039],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_df213792632d9e05beea74d297d12b20.bindTooltip(
+                `<div>
+                     <b>Niagara Falls, Canada (2017)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1714c973e9c40bd529737d4f12f871a7 = L.circleMarker(
+                [43.6534817, -79.3839347],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_1714c973e9c40bd529737d4f12f871a7.bindTooltip(
+                `<div>
+                     <b>Toronto, Canada (2017)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_215eeccbae2971fcbd3976856aa44455 = L.circleMarker(
+                [45.5031824, -73.5698065],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_215eeccbae2971fcbd3976856aa44455.bindTooltip(
+                `<div>
+                     <b>Montreal, Canada (2017)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c48c73a38cead1f8e03120f5ea975c22 = L.circleMarker(
+                [52.4760892, -71.8258668],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_c48c73a38cead1f8e03120f5ea975c22.bindTooltip(
+                `<div>
+                     <b>Quebec, Canada (2017)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bbc8ed727a841d8f03f15d9798ea824f = L.circleMarker(
+                [12.21339425, -69.0408499890865],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_bbc8ed727a841d8f03f15d9798ea824f.bindTooltip(
+                `<div>
+                     <b>Curaçao (2009)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_25350007ae12d3bd34da4f23cc5a5dfe = L.circleMarker(
+                [-25.175, 27.0642],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_25350007ae12d3bd34da4f23cc5a5dfe.bindTooltip(
+                `<div>
+                     <b>Pilanesberg, South-Africa (2022)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_33453b10fefb2f269785365f6014c6b7 = L.circleMarker(
+                [-26.205, 28.049722],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_33453b10fefb2f269785365f6014c6b7.bindTooltip(
+                `<div>
+                     <b>Johannesburg, South-Africa (2022)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9016ced476a519e52e0b504fc7c1d431 = L.circleMarker(
+                [-25.7459277, 28.1879101],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_9016ced476a519e52e0b504fc7c1d431.bindTooltip(
+                `<div>
+                     <b>Pretoria, South-Africa (2022)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3319e43d80e6ae88ad2b960ad56a0dbb = L.circleMarker(
+                [30.4205162, -9.5838532],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_3319e43d80e6ae88ad2b960ad56a0dbb.bindTooltip(
+                `<div>
+                     <b>Agadir, Morocco (2009)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_25b97eddf73c7351e42eb0f3c08d8b2f = L.circleMarker(
+                [33.7734818, 10.886041577050904],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_25b97eddf73c7351e42eb0f3c08d8b2f.bindTooltip(
+                `<div>
+                     <b>Djerba, Tunisia (2017)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_75415f2bbdd8baf9c55f6c5678aaf84b = L.circleMarker(
+                [31.7317009, 9.770219749624271],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_75415f2bbdd8baf9c55f6c5678aaf84b.bindTooltip(
+                `<div>
+                     <b>Tataouine, Tunisia (2017)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_41820c1ed166c83a7e05866037cf7703 = L.circleMarker(
+                [35.8288175, 10.6405392],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_41820c1ed166c83a7e05866037cf7703.bindTooltip(
+                `<div>
+                     <b>Sousse, Tunisia (2017)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_60251ea881dbcf98bd3944448196235d = L.circleMarker(
+                [34.723238699999996, 10.335847425638779],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_60251ea881dbcf98bd3944448196235d.bindTooltip(
+                `<div>
+                     <b>Sfax, Tunisia (2017)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_837c45d283ea2dd288af2a6185eb73f5 = L.circleMarker(
+                [33.8439408, 9.400138],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_837c45d283ea2dd288af2a6185eb73f5.bindTooltip(
+                `<div>
+                     <b>Tunis, Tunisia (2017)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_83cc472e02c0dc050c87e1b0213302d9 = L.circleMarker(
+                [35.8989818, 14.5136759],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_83cc472e02c0dc050c87e1b0213302d9.bindTooltip(
+                `<div>
+                     <b>Valetta, Malta (2017)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bcb6be355979038835e3ac2687f3c1fa = L.circleMarker(
+                [36.0428907, 14.2398479],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_bcb6be355979038835e3ac2687f3c1fa.bindTooltip(
+                `<div>
+                     <b>Victoria, Malta (2017)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8de516a2ee152302d90e27e1ba14f530 = L.circleMarker(
+                [37.3886303, -5.9953403],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_8de516a2ee152302d90e27e1ba14f530.bindTooltip(
+                `<div>
+                     <b>Sevilla, Spain (2018)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2c8e9db583cbda6cfe3566de6a353cd6 = L.circleMarker(
+                [41.1494512, -8.6107884],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_2c8e9db583cbda6cfe3566de6a353cd6.bindTooltip(
+                `<div>
+                     <b>Porto, Portugal (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5698174ea0f64da9896008f54aa5ef44 = L.circleMarker(
+                [41.3828939, 2.1774322],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_5698174ea0f64da9896008f54aa5ef44.bindTooltip(
+                `<div>
+                     <b>Barcelona, Spain (2017)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8dafacb0b47ecef6ad9718fe096512ba = L.circleMarker(
+                [41.6973503, 2.8392392],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_8dafacb0b47ecef6ad9718fe096512ba.bindTooltip(
+                `<div>
+                     <b>Lloret de Mar, Spain (2011)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_26456a51e98d2076603973cc885412c7 = L.circleMarker(
+                [44.841225, -0.5800364],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_26456a51e98d2076603973cc885412c7.bindTooltip(
+                `<div>
+                     <b>Bordeaux, France (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bcf9fa7ee82ed28cba178ae3bf26428f = L.circleMarker(
+                [44.8534568, 0.487531],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_bcf9fa7ee82ed28cba178ae3bf26428f.bindTooltip(
+                `<div>
+                     <b>Bergerac, France (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_347569752edb9941764e1e92d0a43eaa = L.circleMarker(
+                [44.712442, -0.2243792],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_347569752edb9941764e1e92d0a43eaa.bindTooltip(
+                `<div>
+                     <b>Montignac, France (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e1ecbd45584fa2e5ea4cbbfc059cba53 = L.circleMarker(
+                [45.1909365, 0.7184407],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_e1ecbd45584fa2e5ea4cbbfc059cba53.bindTooltip(
+                `<div>
+                     <b>Périgueux, France (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_86e1ec57e2977bf7f7306fc70c67725f = L.circleMarker(
+                [43.5515198, 7.0134418],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_86e1ec57e2977bf7f7306fc70c67725f.bindTooltip(
+                `<div>
+                     <b>Cannes, France (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c5c04a0c218fd450cab41eaa0da47d4f = L.circleMarker(
+                [43.7009358, 7.2683912],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_c5c04a0c218fd450cab41eaa0da47d4f.bindTooltip(
+                `<div>
+                     <b>Nice, France (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8c0340d0b0f5d1e0a8fab7903bff9ebc = L.circleMarker(
+                [43.5812868, 7.1262071],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_8c0340d0b0f5d1e0a8fab7903bff9ebc.bindTooltip(
+                `<div>
+                     <b>Antibes, France (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b099430df84199fff4145f126181125d = L.circleMarker(
+                [43.6899651, 7.3327399],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_b099430df84199fff4145f126181125d.bindTooltip(
+                `<div>
+                     <b>Saint-Jean Cap-Ferrat, France (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ed50fcd8520d56b3ea4b0b57a908d3f6 = L.circleMarker(
+                [43.8506275, 7.6240756],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_ed50fcd8520d56b3ea4b0b57a908d3f6.bindTooltip(
+                `<div>
+                     <b>Dolceacqua, Italy (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0897aaa53381c38794725f2477d6fe1e = L.circleMarker(
+                [43.7323492, 7.4276832],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_0897aaa53381c38794725f2477d6fe1e.bindTooltip(
+                `<div>
+                     <b>Monaco (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_04471ce62927400d221f844fa20ada38 = L.circleMarker(
+                [45.0677551, 7.6824892],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_04471ce62927400d221f844fa20ada38.bindTooltip(
+                `<div>
+                     <b>Turin, Italy (2018)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4666089c3d8f52adc45dbeb0c215444a = L.circleMarker(
+                [45.4641943, 9.1896346],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_4666089c3d8f52adc45dbeb0c215444a.bindTooltip(
+                `<div>
+                     <b>Milan, Italy (2016)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_16676adb9220cea996de81263be5f370 = L.circleMarker(
+                [43.7698712, 11.2555757],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_16676adb9220cea996de81263be5f370.bindTooltip(
+                `<div>
+                     <b>Florence, Italy (2016)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_69b102755649b096c62f42d54fb3d3f9 = L.circleMarker(
+                [45.939475900000005, 9.149410145408947],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_69b102755649b096c62f42d54fb3d3f9.bindTooltip(
+                `<div>
+                     <b>Como, Italy (2016)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5eac03b9680d3215b3ed60dfbce8afec = L.circleMarker(
+                [41.8933203, 12.4829321],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_5eac03b9680d3215b3ed60dfbce8afec.bindTooltip(
+                `<div>
+                     <b>Rome, Italy (2016)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0603a71f6dd2c33b88db91fadacc105e = L.circleMarker(
+                [45.4371908, 12.3345898],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_0603a71f6dd2c33b88db91fadacc105e.bindTooltip(
+                `<div>
+                     <b>Venice, Italy (2016)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_eb16b0504cc4ddfed234257ce980c525 = L.circleMarker(
+                [41.0091982, 28.9662187],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_eb16b0504cc4ddfed234257ce980c525.bindTooltip(
+                `<div>
+                     <b>Istanbul, Turkey (2010)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4780728afcbf868228e45b4c314cb136 = L.circleMarker(
+                [42.6977028, 23.3217359],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_4780728afcbf868228e45b4c314cb136.bindTooltip(
+                `<div>
+                     <b>Sofia, Bulgaria (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1e1a07302e945bbd2b863a55e2e06178 = L.circleMarker(
+                [47.4978918, 19.0401609],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_1e1a07302e945bbd2b863a55e2e06178.bindTooltip(
+                `<div>
+                     <b>Budapest, Hungary (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ecebebd60b86d7f3c61eae0ba4a80e5f = L.circleMarker(
+                [48.2083537, 16.3725042],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_ecebebd60b86d7f3c61eae0ba4a80e5f.bindTooltip(
+                `<div>
+                     <b>Vienna, Austria (2022)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c640e34c085eb928e4ddd996c6193e98 = L.circleMarker(
+                [47.7981346, 13.0464806],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_c640e34c085eb928e4ddd996c6193e98.bindTooltip(
+                `<div>
+                     <b>Salzburg, Austria (2013)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8b71a47bbd4ea078aa8d8ef96801d53d = L.circleMarker(
+                [47.9562624, 12.7552977],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_8b71a47bbd4ea078aa8d8ef96801d53d.bindTooltip(
+                `<div>
+                     <b>Tettenhausen, Germany (2013)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b69627d82ef7556d0839644ae926cce0 = L.circleMarker(
+                [50.0336707, 19.260079835793633],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_b69627d82ef7556d0839644ae926cce0.bindTooltip(
+                `<div>
+                     <b>Auschwitz, Polen (2023)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f485c9c7eb2a447d27776eca888127ce = L.circleMarker(
+                [50.0619474, 19.9368564],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_f485c9c7eb2a447d27776eca888127ce.bindTooltip(
+                `<div>
+                     <b>Krakow, Poland (2023)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1b20c5eb0be60417682692f40cb90ee1 = L.circleMarker(
+                [52.2319581, 21.0067249],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_1b20c5eb0be60417682692f40cb90ee1.bindTooltip(
+                `<div>
+                     <b>Warsaw, Poland (2023)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_57da394dfe4e2a2621bce7acb459b3c4 = L.circleMarker(
+                [53.7767239, 20.477780523409734],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_57da394dfe4e2a2621bce7acb459b3c4.bindTooltip(
+                `<div>
+                     <b>Olsztyn, Poland (2023)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3a69893236b93357ab86a0e4b94a63a9 = L.circleMarker(
+                [56.9493977, 24.1051846],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_3a69893236b93357ab86a0e4b94a63a9.bindTooltip(
+                `<div>
+                     <b>Riga, Latvia (2017)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_cc2bae3c2709f085156197f73c513e45 = L.circleMarker(
+                [59.4372155, 24.7453688],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_cc2bae3c2709f085156197f73c513e45.bindTooltip(
+                `<div>
+                     <b>Tallinn, Estonia (2017 and 2021)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_919639d38009ea262a1e3c0c505bafc7 = L.circleMarker(
+                [60.1674881, 24.9427473],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_919639d38009ea262a1e3c0c505bafc7.bindTooltip(
+                `<div>
+                     <b>Helsinki, Finland (many many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_af84b35b6193f046b76cd8043ab28935 = L.circleMarker(
+                [60.4517531, 22.2670522],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_af84b35b6193f046b76cd8043ab28935.bindTooltip(
+                `<div>
+                     <b>Turku, Finland (2021)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1538973f5e4571cba77d95e931726017 = L.circleMarker(
+                [61.4980214, 23.7603118],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_1538973f5e4571cba77d95e931726017.bindTooltip(
+                `<div>
+                     <b>Tampere, Finland (2021)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_118530966e7d8ce26976d226f5264525 = L.circleMarker(
+                [61.4781666, 23.5096158],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_118530966e7d8ce26976d226f5264525.bindTooltip(
+                `<div>
+                     <b>Nokia, Finland (2021)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1094957e1bf9b9ae9e952c51fa89fe1f = L.circleMarker(
+                [64.1318262, 28.3878316],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_1094957e1bf9b9ae9e952c51fa89fe1f.bindTooltip(
+                `<div>
+                     <b>Sotkamo, Finland (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e18c512e2d2717bab7dab659dc203ddc = L.circleMarker(
+                [62.82411705, 27.593193798013104],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_e18c512e2d2717bab7dab659dc203ddc.bindTooltip(
+                `<div>
+                     <b>Kuopio, Finland (2021)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_cc2d4c089cce03aa3c3020c53621f93f = L.circleMarker(
+                [66.0822914, 24.8058841],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_cc2d4c089cce03aa3c3020c53621f93f.bindTooltip(
+                `<div>
+                     <b>Tervola, Finland (2016)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0732574cda1f854cd0741003b1492078 = L.circleMarker(
+                [66.5025657, 25.73122],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_0732574cda1f854cd0741003b1492078.bindTooltip(
+                `<div>
+                     <b>Rovaniemi, Finland (2016)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_eef5b576de6b778f9cf0dce15b585c57 = L.circleMarker(
+                [66.8985199, 26.199236306450683],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_eef5b576de6b778f9cf0dce15b585c57.bindTooltip(
+                `<div>
+                     <b>Korvala, Finland (2016)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a846a9eb486a39f407d44e1ad48cc1e5 = L.circleMarker(
+                [68.3501695, 18.8300059],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_a846a9eb486a39f407d44e1ad48cc1e5.bindTooltip(
+                `<div>
+                     <b>Abisko, Sweden (2022)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8c0f0ac46828b90849fa4099d6e0622e = L.circleMarker(
+                [67.848889, 20.302778],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_8c0f0ac46828b90849fa4099d6e0622e.bindTooltip(
+                `<div>
+                     <b>Kiruna, Sweden (2022)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7eef5e63ceba0adb8370a4e5937f2ff4 = L.circleMarker(
+                [65.5831187, 22.1459535],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_7eef5e63ceba0adb8370a4e5937f2ff4.bindTooltip(
+                `<div>
+                     <b>Luleå, Sweden (2022)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_10fafd14290d072a9104c8e80cfbfaaa = L.circleMarker(
+                [63.8256568, 20.2630745],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_10fafd14290d072a9104c8e80cfbfaaa.bindTooltip(
+                `<div>
+                     <b>Umeå, Sweden (2022)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f6be0f57c9b4e2ad2f96af5233f2b7b8 = L.circleMarker(
+                [60.6750132, 17.1467019],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_f6be0f57c9b4e2ad2f96af5233f2b7b8.bindTooltip(
+                `<div>
+                     <b>Gävle, Sweden (2022)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a8b745d9e3f4840e99432eb51a171293 = L.circleMarker(
+                [59.3251172, 18.0710935],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_a8b745d9e3f4840e99432eb51a171293.bindTooltip(
+                `<div>
+                     <b>Stockholm, Sweden (many many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_18551e7c79efdb364376876c2524c377 = L.circleMarker(
+                [59.6110992, 16.5463679],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_18551e7c79efdb364376876c2524c377.bindTooltip(
+                `<div>
+                     <b>Västerås, Sweden (2016)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f8fb055ad96c326e19919316c1fd36ec = L.circleMarker(
+                [60.102423, 19.94126],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_f8fb055ad96c326e19919316c1fd36ec.bindTooltip(
+                `<div>
+                     <b>Mariehamn, åland (2016)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0177414bcf32d9a126e57fb7ce47e110 = L.circleMarker(
+                [60.0981769, 18.8058527],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_0177414bcf32d9a126e57fb7ce47e110.bindTooltip(
+                `<div>
+                     <b>Grisslehamn, Sweden (2016)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4171f976f8c73ffb204bb3feb569330e = L.circleMarker(
+                [59.2599454, 17.2229487],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_4171f976f8c73ffb204bb3feb569330e.bindTooltip(
+                `<div>
+                     <b>Mariefred, Sweden (2016)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4f10c7d9ad754f4be1f78b1dcbdc0d23 = L.circleMarker(
+                [58.7545409, 17.0120656],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_4f10c7d9ad754f4be1f78b1dcbdc0d23.bindTooltip(
+                `<div>
+                     <b>Nyköping, Sweden (2016)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f4e2c0170ea2d45b018d5876fc09c744 = L.circleMarker(
+                [55.6052931, 13.0001566],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_f4e2c0170ea2d45b018d5876fc09c744.bindTooltip(
+                `<div>
+                     <b>Malmö, Sweden (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_58bd8a880bc8202951f5765e214ff542 = L.circleMarker(
+                [55.6824143, 12.5916012],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_58bd8a880bc8202951f5765e214ff542.bindTooltip(
+                `<div>
+                     <b>Copenhagen, Sweden (2016 and 2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_99b9535f5fce5522570cfd5b66f87b53 = L.circleMarker(
+                [59.9133301, 10.7389701],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_99b9535f5fce5522570cfd5b66f87b53.bindTooltip(
+                `<div>
+                     <b>Oslo, Norway (2017)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_81b04ea7635d1909676d2e3a691d881e = L.circleMarker(
+                [60.3943055, 5.3259192],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_81b04ea7635d1909676d2e3a691d881e.bindTooltip(
+                `<div>
+                     <b>Bergen, Norway (2017)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_09233dc82a18c4db0ab785ded365fdba = L.circleMarker(
+                [61.03861345, 7.8032867220845485],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_09233dc82a18c4db0ab785ded365fdba.bindTooltip(
+                `<div>
+                     <b>Laerdal, Norway (2017)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_831f79620d5617483bd548c25de5948e = L.circleMarker(
+                [63.9368093, -21.0035319],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_831f79620d5617483bd548c25de5948e.bindTooltip(
+                `<div>
+                     <b>Selfoss, Iceland (2020)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_73dd976ab376ec160e5d3ba00078e950 = L.circleMarker(
+                [64.1306381, -20.3209294],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_73dd976ab376ec160e5d3ba00078e950.bindTooltip(
+                `<div>
+                     <b>Flúðir, Iceland (2020)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ecabadfa2b7cc5da086d7e04ef466e95 = L.circleMarker(
+                [63.4188166, -19.0054737],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_ecabadfa2b7cc5da086d7e04ef466e95.bindTooltip(
+                `<div>
+                     <b>Vík í Mýrdal, Iceland (2020)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_465cbd30c1302c9a4715f1922b207dc0 = L.circleMarker(
+                [64.3126964, -20.3007733],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_465cbd30c1302c9a4715f1922b207dc0.bindTooltip(
+                `<div>
+                     <b>Strokkur, Iceland (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1957a56ec3d3f5a7517e8dc87cf90251 = L.circleMarker(
+                [63.9975943, -21.1868303],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_1957a56ec3d3f5a7517e8dc87cf90251.bindTooltip(
+                `<div>
+                     <b>Hveragerði, Iceland (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_550482ef2baaab455ed9a49193b9cf03 = L.circleMarker(
+                [64.07858834999999, -22.68481416948854],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_550482ef2baaab455ed9a49193b9cf03.bindTooltip(
+                `<div>
+                     <b>Reykjanes Lighthouse, Iceland (2020)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ab0c615122d2710bb0aefccd087f6ac1 = L.circleMarker(
+                [64.7509083, -23.6469183],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_ab0c615122d2710bb0aefccd087f6ac1.bindTooltip(
+                `<div>
+                     <b>Hellnar, Iceland (2020)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_92df6bfb085b7405e2582508ed13c788 = L.circleMarker(
+                [64.5383337, -21.920208],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_92df6bfb085b7405e2582508ed13c788.bindTooltip(
+                `<div>
+                     <b>Borgarnes, Iceland (2020)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ff73203f84b40db074b220812dc50663 = L.circleMarker(
+                [64.1776, -21.6285881],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_ff73203f84b40db074b220812dc50663.bindTooltip(
+                `<div>
+                     <b>Laugabakki, Iceland (2020)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f3421248a3fbf67c9ed44aafaad8cc0e = L.circleMarker(
+                [65.68390355, -18.11217559813441],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_f3421248a3fbf67c9ed44aafaad8cc0e.bindTooltip(
+                `<div>
+                     <b>Akureyri, Iceland (2020)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b1da6ba91f488d0f3c46ed6b8b48fca1 = L.circleMarker(
+                [65.6032528, -17.01333007267188],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_b1da6ba91f488d0f3c46ed6b8b48fca1.bindTooltip(
+                `<div>
+                     <b>Mývatn, Iceland (2020)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f2b6a04945eea77dce94fe56362a3f27 = L.circleMarker(
+                [53.3493795, -6.2605593],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_f2b6a04945eea77dce94fe56362a3f27.bindTooltip(
+                `<div>
+                     <b>Dublin, Ireland (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ff7d2c567ee1a6357c9c5717cfa01864 = L.circleMarker(
+                [54.596391, -5.9301829],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_ff7d2c567ee1a6357c9c5717cfa01864.bindTooltip(
+                `<div>
+                     <b>Belfast, Northern-Ireland (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_084c5bfe8fe40e3a68b147dc28d021be = L.circleMarker(
+                [56.6827647, -5.1014552],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_084c5bfe8fe40e3a68b147dc28d021be.bindTooltip(
+                `<div>
+                     <b>Highlands, Scotland (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3912dcfc2f202d558224f8bc8a5c8909 = L.circleMarker(
+                [56.0842055, -4.5395408],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_3912dcfc2f202d558224f8bc8a5c8909.bindTooltip(
+                `<div>
+                     <b>Balmaha, Scotland (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_08907ebb16626773438545fe85b92339 = L.circleMarker(
+                [56.2436941, -4.2148033],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_08907ebb16626773438545fe85b92339.bindTooltip(
+                `<div>
+                     <b>Callander, Scotland (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_db9f234454c365c614e6f0dc081c6766 = L.circleMarker(
+                [55.861155, -4.2501687],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_db9f234454c365c614e6f0dc081c6766.bindTooltip(
+                `<div>
+                     <b>Glasgow, Scotland (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f37064d6db6e384141270b48e2b81ec6 = L.circleMarker(
+                [55.9533456, -3.1883749],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_f37064d6db6e384141270b48e2b81ec6.bindTooltip(
+                `<div>
+                     <b>Edinburgh, Scotland (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1e11397df8fa74284e1dbb8277b0b4db = L.circleMarker(
+                [54.9738474, -1.6131572],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_1e11397df8fa74284e1dbb8277b0b4db.bindTooltip(
+                `<div>
+                     <b>Newcastle, England (2022)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c76f8a7cc6ebbb46a1a8436ea0a9ef71 = L.circleMarker(
+                [54.666667, -1.75],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_c76f8a7cc6ebbb46a1a8436ea0a9ef71.bindTooltip(
+                `<div>
+                     <b>Durham, England (2022)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e50197c776177b1e5787d23a2eb675ed = L.circleMarker(
+                [53.4794892, -2.2451148],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_e50197c776177b1e5787d23a2eb675ed.bindTooltip(
+                `<div>
+                     <b>Manchester, England (2022)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d81f3e4db0c720602c36d6b8a5340a74 = L.circleMarker(
+                [53.4071991, -2.99168],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_d81f3e4db0c720602c36d6b8a5340a74.bindTooltip(
+                `<div>
+                     <b>Liverpool, England (2022)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d07b0096cdd690cff6f8487c488adff7 = L.circleMarker(
+                [52.4796992, -1.9026911],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_d07b0096cdd690cff6f8487c488adff7.bindTooltip(
+                `<div>
+                     <b>Birmingham, England (2022)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b7273a0784b65e02ddc9f8b80f5ae72e = L.circleMarker(
+                [51.5073359, -0.12765],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_b7273a0784b65e02ddc9f8b80f5ae72e.bindTooltip(
+                `<div>
+                     <b>London, England (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7a4fb5e4c3d71d108f7db36f28cecfcd = L.circleMarker(
+                [51.4816546, -3.1791934],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_7a4fb5e4c3d71d108f7db36f28cecfcd.bindTooltip(
+                `<div>
+                     <b>Cardiff, Wales (2018)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3fe68a80aff2ee0c6357651b0c20f256 = L.circleMarker(
+                [51.4430523, -2.581638861285822],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_3fe68a80aff2ee0c6357651b0c20f256.bindTooltip(
+                `<div>
+                     <b>Bristol, Wales (2018)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3ed9e4d9534f5ca5e7beb962fde8ea3d = L.circleMarker(
+                [45.756655699999996, 9.754219200862249],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_3ed9e4d9534f5ca5e7beb962fde8ea3d.bindTooltip(
+                `<div>
+                     <b>Bérgamo, Italy (2016)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f9f6e646a6d0a1a7192810b510bac8de = L.circleMarker(
+                [46.2017559, 6.1466014],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_f9f6e646a6d0a1a7192810b510bac8de.bindTooltip(
+                `<div>
+                     <b>Genève, Switzerland (2018)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_be129679578f371048a1b73078bb046d = L.circleMarker(
+                [47.3744489, 8.5410422],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_be129679578f371048a1b73078bb046d.bindTooltip(
+                `<div>
+                     <b>Zürich, Switzerland (2018)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_410285bb46052b3f888f4a3e72a6a151 = L.circleMarker(
+                [46.5218269, 6.6327025],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_410285bb46052b3f888f4a3e72a6a151.bindTooltip(
+                `<div>
+                     <b>Lausanne, Switzerland (2018)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ae81996ad1e067fbb8a21ef226604a1e = L.circleMarker(
+                [46.9484742, 7.4521749],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_ae81996ad1e067fbb8a21ef226604a1e.bindTooltip(
+                `<div>
+                     <b>Bern, Switzerland (2018)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_53f39d805044fd895ce1258f65309ed4 = L.circleMarker(
+                [47.2380222, 6.0243622],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_53f39d805044fd895ce1258f65309ed4.bindTooltip(
+                `<div>
+                     <b>Besançon, France (2018)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_78c786451b86f9486a8651e28a3379fd = L.circleMarker(
+                [48.6937223, 6.1834097],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_78c786451b86f9486a8651e28a3379fd.bindTooltip(
+                `<div>
+                     <b>Nancy, France (2018)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7336dbbda8082649cc7fc08270e0134f = L.circleMarker(
+                [49.6112768, 6.129799],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_7336dbbda8082649cc7fc08270e0134f.bindTooltip(
+                `<div>
+                     <b>Luxembourg, Luxembourg (2016)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_33da06b35f6be900753671b52b709e45 = L.circleMarker(
+                [45.831944, -0.906667],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_33da06b35f6be900753671b52b709e45.bindTooltip(
+                `<div>
+                     <b>Champagne, France (2013)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a58eb8674baa1693eb63ee3760b6ddde = L.circleMarker(
+                [50.2591813, 4.9130588],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_a58eb8674baa1693eb63ee3760b6ddde.bindTooltip(
+                `<div>
+                     <b>Dinant, Belgium (2015)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d406b389afeb77fdb0cd3c95666bac21 = L.circleMarker(
+                [50.4665284, 4.8661892],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_d406b389afeb77fdb0cd3c95666bac21.bindTooltip(
+                `<div>
+                     <b>Namur, Belgium (2015)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_af91a3f89fb101885180e765b16e181e = L.circleMarker(
+                [50.4116459, 4.4445264],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_af91a3f89fb101885180e765b16e181e.bindTooltip(
+                `<div>
+                     <b>Charleroi, Belgium (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d3128da4e31a75e4d2f77463e0604232 = L.circleMarker(
+                [49.7949836, 5.0672528],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_d3128da4e31a75e4d2f77463e0604232.bindTooltip(
+                `<div>
+                     <b>Bouillon, Belgium (2012)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bb249641e37d67f39c72a3bf8501319a = L.circleMarker(
+                [50.4265348, 6.0276059],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_bb249641e37d67f39c72a3bf8501319a.bindTooltip(
+                `<div>
+                     <b>Malmedy, Belgium (2010 and 2013)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_db566da37434c189b1130449642da25a = L.circleMarker(
+                [50.6450944, 5.5736112],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_db566da37434c189b1130449642da25a.bindTooltip(
+                `<div>
+                     <b>Liége, Belgium (2015)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fc58f68b75210f8e24e949d280b2efb2 = L.circleMarker(
+                [50.85169675, 2.891473683275896],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_fc58f68b75210f8e24e949d280b2efb2.bindTooltip(
+                `<div>
+                     <b>Ieper, Belgium (2015)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a43f394ad3cb0acd40f8c7b67315d6c0 = L.circleMarker(
+                [50.8276429, 3.2659884],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_a43f394ad3cb0acd40f8c7b67315d6c0.bindTooltip(
+                `<div>
+                     <b>Kortrijk (Belgium (2015)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_119e8859ad0c312434cbaf1fea3917a4 = L.circleMarker(
+                [51.2085526, 3.226772],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_119e8859ad0c312434cbaf1fea3917a4.bindTooltip(
+                `<div>
+                     <b>Brugge, Belgium (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_76a6000f3e307c0a14595dd997f53f95 = L.circleMarker(
+                [51.2258565, 2.919496],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_76a6000f3e307c0a14595dd997f53f95.bindTooltip(
+                `<div>
+                     <b>Oostende, Belgium (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_37cb3f23a0244ac4a314fc8b97393450 = L.circleMarker(
+                [50.8465573, 4.351697],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_37cb3f23a0244ac4a314fc8b97393450.bindTooltip(
+                `<div>
+                     <b>Brussels, Belgium (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_02b1967b29a690798d365dac1c7af7b9 = L.circleMarker(
+                [51.2211097, 4.3997081],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_02b1967b29a690798d365dac1c7af7b9.bindTooltip(
+                `<div>
+                     <b>Antwerpen, Belgium (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b59b574d8e69006b4b8ae7ed1a6fe88c = L.circleMarker(
+                [51.1646685, 4.1395124],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_b59b574d8e69006b4b8ae7ed1a6fe88c.bindTooltip(
+                `<div>
+                     <b>Sint-Niklaas, Belgium (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d261b3af40a0970c9b1776e260d40a1f = L.circleMarker(
+                [50.938361, 6.959974],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_d261b3af40a0970c9b1776e260d40a1f.bindTooltip(
+                `<div>
+                     <b>Cologne, Germany (many time)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_64fab71f8c47c3aab8ff40b36834fd20 = L.circleMarker(
+                [50.1106444, 8.6820917],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_64fab71f8c47c3aab8ff40b36834fd20.bindTooltip(
+                `<div>
+                     <b>Frankfurt, Germany (2022)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_aaa5e1fb997ef988c13791114fcf705a = L.circleMarker(
+                [50.0874654, 14.4212535],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_aaa5e1fb997ef988c13791114fcf705a.bindTooltip(
+                `<div>
+                     <b>Prague, Czech Republic (2015 and 2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bf88df4c38450b6d97e2b6a21513c195 = L.circleMarker(
+                [52.5170365, 13.3888599],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_bf88df4c38450b6d97e2b6a21513c195.bindTooltip(
+                `<div>
+                     <b>Berlin, Germany (2016 and 2022)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_72f4e712da3c906392c756d7190146d5 = L.circleMarker(
+                [53.202995, 4.994912625567253],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_72f4e712da3c906392c756d7190146d5.bindTooltip(
+                `<div>
+                     <b>Vlieland the Netherlands (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9a8d5cca02253bae9cc298f0d7a6ece3 = L.circleMarker(
+                [53.3339055, 5.351490875699594],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_9a8d5cca02253bae9cc298f0d7a6ece3.bindTooltip(
+                `<div>
+                     <b>Terschelling, the Netherlands (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_24cffd723511d16b8092cadd218e667c = L.circleMarker(
+                [53.4480197, 5.739406534327882],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_24cffd723511d16b8092cadd218e667c.bindTooltip(
+                `<div>
+                     <b>Ameland, the Netherlands (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6584ff8f201d723acc85d62ffd1e6705 = L.circleMarker(
+                [53.4782844, 6.1610076],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_6584ff8f201d723acc85d62ffd1e6705.bindTooltip(
+                `<div>
+                     <b>Schiermonnikoog, the Netherlands (2022)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_36b63a05d4824ff92669af9b4aa7c180 = L.circleMarker(
+                [53.2190652, 6.5680077],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_36b63a05d4824ff92669af9b4aa7c180.bindTooltip(
+                `<div>
+                     <b>Groningen, the Netherlands (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_06931fd19c407732121d72d528920865 = L.circleMarker(
+                [53.2005936, 5.7918548],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_06931fd19c407732121d72d528920865.bindTooltip(
+                `<div>
+                     <b>Leeuwarden, the Netherlands (2013)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7cc615bf6dc967deee6075a7dda46ee2 = L.circleMarker(
+                [53.033548, 5.6611029],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_7cc615bf6dc967deee6075a7dda46ee2.bindTooltip(
+                `<div>
+                     <b>Sneek, the Netherlands (2013)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5781a8c683169e1ad19c39e2042571c6 = L.circleMarker(
+                [53.1752103, 5.4141998],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_5781a8c683169e1ad19c39e2042571c6.bindTooltip(
+                `<div>
+                     <b>Harlingen, the Netherlands (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_077cd6a7d477cdabae0f1e519388d298 = L.circleMarker(
+                [52.8333073, 6.3669053],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_077cd6a7d477cdabae0f1e519388d298.bindTooltip(
+                `<div>
+                     <b>Dwingeloo, the Netherlands (2021)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0306a90d57d4670a04c7b4347559ba93 = L.circleMarker(
+                [52.998474200000004, 5.923148795038062],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_0306a90d57d4670a04c7b4347559ba93.bindTooltip(
+                `<div>
+                     <b>Heerneveen, the Netherlands (2013)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fd30403a2f116ec585db03789524667a = L.circleMarker(
+                [52.711744350000004, 6.197307325163717],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_fd30403a2f116ec585db03789524667a.bindTooltip(
+                `<div>
+                     <b>Meppel, the Netherlands (2013)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8ea8a9877598dced179425a2e5841112 = L.circleMarker(
+                [52.5089759, 6.0943765],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_8ea8a9877598dced179425a2e5841112.bindTooltip(
+                `<div>
+                     <b>Zwolle, the Netherlands (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_79e6f85972ed19a7e785ee2f6d429ceb = L.circleMarker(
+                [52.2658726, 6.7924049],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_79e6f85972ed19a7e785ee2f6d429ceb.bindTooltip(
+                `<div>
+                     <b>Hengelo, the Netherlands (2020)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_95f205e141881afd1eddda66967808b4 = L.circleMarker(
+                [50.8512438, 5.6909768],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_95f205e141881afd1eddda66967808b4.bindTooltip(
+                `<div>
+                     <b>Maastricht, the Netherlands (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6a1ba4eb52e62e4d79187e35cc3b6996 = L.circleMarker(
+                [52.02320415, 5.551800233162295],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_6a1ba4eb52e62e4d79187e35cc3b6996.bindTooltip(
+                `<div>
+                     <b>Veenendaal, the Netherlands (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b4be4ada28978647d0e701d98d5f9620 = L.circleMarker(
+                [52.018119350000006, 4.711122134697802],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_b4be4ada28978647d0e701d98d5f9620.bindTooltip(
+                `<div>
+                     <b>Gouda, the Netherlands (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_052a514bfc537bb87b59d84c0bca1df4 = L.circleMarker(
+                [52.0799838, 4.3113461],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_052a514bfc537bb87b59d84c0bca1df4.bindTooltip(
+                `<div>
+                     <b>The Hague, the Netherlands (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8461a500cfb47afaa981c4f3ae406ac1 = L.circleMarker(
+                [51.9244424, 4.47775],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_8461a500cfb47afaa981c4f3ae406ac1.bindTooltip(
+                `<div>
+                     <b>Rotterdam, the Netherlands (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0d402e5d0b70ba4a19cf995026aa7884 = L.circleMarker(
+                [52.3730796, 4.8924534],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_0d402e5d0b70ba4a19cf995026aa7884.bindTooltip(
+                `<div>
+                     <b>Amsterdam, the Netherlands (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_215250f0b8b5df995620e981b655bdf9 = L.circleMarker(
+                [52.2695736, 6.236339604766698],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_215250f0b8b5df995620e981b655bdf9.bindTooltip(
+                `<div>
+                     <b>Deventer, the Netherlands (2012)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_322b3dd257137226495c4daf9e8f16b5 = L.circleMarker(
+                [52.4535194, 6.4137203],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_322b3dd257137226495c4daf9e8f16b5.bindTooltip(
+                `<div>
+                     <b>Lemele, the Netherlands (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ef7250aeb08c5d0fab7c2f7bda083b47 = L.circleMarker(
+                [52.56982145, 6.633166913313982],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_ef7250aeb08c5d0fab7c2f7bda083b47.bindTooltip(
+                `<div>
+                     <b>Hardenberg, the Netherlands (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_59bc40741f0ddc7ca4bcda41ed7c3b5c = L.circleMarker(
+                [53.1429957, 7.0381231],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_59bc40741f0ddc7ca4bcda41ed7c3b5c.bindTooltip(
+                `<div>
+                     <b>Winschoten, the Netherlands (2022)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7df1b89bdda40fcf5e4a95c09ad2cf94 = L.circleMarker(
+                [51.58561845, 5.0660616131367675],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_7df1b89bdda40fcf5e4a95c09ad2cf94.bindTooltip(
+                `<div>
+                     <b>Tilburg, the Netherlands (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_97d952e249e7b5da846b096df27b9c59 = L.circleMarker(
+                [50.8775239, 5.981506585454879],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_97d952e249e7b5da846b096df27b9c59.bindTooltip(
+                `<div>
+                     <b>Heerlen, the Netherlands (2023)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_01b6b348ac1489221723916fc8ff7d6a = L.circleMarker(
+                [52.3713394, 4.5307624],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_01b6b348ac1489221723916fc8ff7d6a.bindTooltip(
+                `<div>
+                     <b>Zandvoort, the Netherlands (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_201842784a60dfc7dcc6de837b6676fe = L.circleMarker(
+                [51.29884295, 3.8422043956030683],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_201842784a60dfc7dcc6de837b6676fe.bindTooltip(
+                `<div>
+                     <b>Terneuzen, the Netherlands (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4b55c013a7588a14789005c9747bf190 = L.circleMarker(
+                [51.5031033, 3.8897596],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_4b55c013a7588a14789005c9747bf190.bindTooltip(
+                `<div>
+                     <b>Goes, the Netherlands (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e52179f70155a339e673f0553e76faea = L.circleMarker(
+                [51.6497688, 3.9208365],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_e52179f70155a339e673f0553e76faea.bindTooltip(
+                `<div>
+                     <b>Zierikzee, the Netherlands (2023)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_03079d86ad1bdfe37e89e3c5bac66e9d = L.circleMarker(
+                [51.6601211, 4.0937229],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_03079d86ad1bdfe37e89e3c5bac66e9d.bindTooltip(
+                `<div>
+                     <b>Bruinisse, the Netherlands (2023)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e664f18709ea6c8bff15fc0282f0833c = L.circleMarker(
+                [37.5666791, 126.9782914],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_e664f18709ea6c8bff15fc0282f0833c.bindTooltip(
+                `<div>
+                     <b>Seoul, South-Korea (2022)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_92cd9b98ff611548bb622a6b5f948ce1 = L.circleMarker(
+                [35.1799528, 129.0752365],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_92cd9b98ff611548bb622a6b5f948ce1.bindTooltip(
+                `<div>
+                     <b>Busan, South-Korea (2022)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_424e957351f31a4c5d296e0ead501f79 = L.circleMarker(
+                [22.9912348, 120.184982],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_424e957351f31a4c5d296e0ead501f79.bindTooltip(
+                `<div>
+                     <b>Tainan, Taiwan (2018)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4a3c8c2cfe024816f0bc2a8cefc441c2 = L.circleMarker(
+                [22.6203348, 120.3120375],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_4a3c8c2cfe024816f0bc2a8cefc441c2.bindTooltip(
+                `<div>
+                     <b>Kaohsiung, Taiwan (2018)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b1e7b5189c1b91a1f257ecc5ad7489f6 = L.circleMarker(
+                [23.4591664, 120.2930004],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_b1e7b5189c1b91a1f257ecc5ad7489f6.bindTooltip(
+                `<div>
+                     <b>Chiayi, Taiwan (2018)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_aa9c1a33097f64f02b4e273d34c21692 = L.circleMarker(
+                [25.0375198, 121.5636796],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_aa9c1a33097f64f02b4e273d34c21692.bindTooltip(
+                `<div>
+                     <b>Taipei, Taiwan (2018)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_948d0afcf4000de05bc0465f5c5a3808 = L.circleMarker(
+                [21.945278, 120.800278],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_948d0afcf4000de05bc0465f5c5a3808.bindTooltip(
+                `<div>
+                     <b>Kenting, Taiwan (2018)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_98d6130a7148f47ab2a61b2758e6bb82 = L.circleMarker(
+                [51.33154005, 4.087702848747496],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_98d6130a7148f47ab2a61b2758e6bb82.bindTooltip(
+                `<div>
+                     <b>Hulst, the Netherlands (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b47af3d25bdf9e858a9bc4a2a05e2deb = L.circleMarker(
+                [52.1594747, 4.4908843],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_b47af3d25bdf9e858a9bc4a2a05e2deb.bindTooltip(
+                `<div>
+                     <b>Leiden, the Netherlands (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d2fa9ce3ad638620820e644a398e5fbf = L.circleMarker(
+                [51.5887845, 4.7760237],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_d2fa9ce3ad638620820e644a398e5fbf.bindTooltip(
+                `<div>
+                     <b>Breda, the Netherlands (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6a73c8261fe0958580a982e00c822654 = L.circleMarker(
+                [52.086531750000006, 5.249007957671885],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_6a73c8261fe0958580a982e00c822654.bindTooltip(
+                `<div>
+                     <b>Zeist, the Netherlands (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7ec23be80769621ee4484bca38422780 = L.circleMarker(
+                [52.080985600000005, 5.12768396945229],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_7ec23be80769621ee4484bca38422780.bindTooltip(
+                `<div>
+                     <b>Utrecht, the Netherlands (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b7f3efdb188c12bb52c7e1ea774abc77 = L.circleMarker(
+                [52.2698936, 4.452685652490141],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_b7f3efdb188c12bb52c7e1ea774abc77.bindTooltip(
+                `<div>
+                     <b>Noordwijk, the Netherlands (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b1b1a1398b175512127346bc524c3e5b = L.circleMarker(
+                [52.383705750000004, 4.643559696559635],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_b1b1a1398b175512127346bc524c3e5b.bindTooltip(
+                `<div>
+                     <b>Haarlem, the Netherlands (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_23a779379f8fd2db2a2b0580c1f1c997 = L.circleMarker(
+                [64.145981, -21.9422367],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_23a779379f8fd2db2a2b0580c1f1c997.bindTooltip(
+                `<div>
+                     <b>Reykjavik, Iceland (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c1be54481e72f0f7310876572c07bcd4 = L.circleMarker(
+                [33.8439408, 9.400138],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_c1be54481e72f0f7310876572c07bcd4.bindTooltip(
+                `<div>
+                     <b>Tunis, Tunisia (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1d68cec1cfd586cda0ad124652741a96 = L.circleMarker(
+                [59.8586126, 17.6387436],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_1d68cec1cfd586cda0ad124652741a96.bindTooltip(
+                `<div>
+                     <b>Uppsala, Sweden (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_deb11e04720dd008996114f67000ccf2 = L.circleMarker(
+                [50.879202, 4.7011675],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_deb11e04720dd008996114f67000ccf2.bindTooltip(
+                `<div>
+                     <b>Leuven, Belgium (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_551145513880573c989ead5f58ff270b = L.circleMarker(
+                [51.0538286, 3.7250121],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_551145513880573c989ead5f58ff270b.bindTooltip(
+                `<div>
+                     <b>Gent, Belgium (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f64b24d75173dae88aa51184dd7b8ea4 = L.circleMarker(
+                [48.8534951, 2.3483915],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_f64b24d75173dae88aa51184dd7b8ea4.bindTooltip(
+                `<div>
+                     <b>Paris, France (many times)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_918b123f304f429408c498ccf29bea3d = L.circleMarker(
+                [50.6365654, 3.0635282],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_918b123f304f429408c498ccf29bea3d.bindTooltip(
+                `<div>
+                     <b>Lille, France (2009 and 2018)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d8c88c9ea9315e73eb50fa832228c1f5 = L.circleMarker(
+                [51.238218, 4.8242404],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_d8c88c9ea9315e73eb50fa832228c1f5.bindTooltip(
+                `<div>
+                     <b>Lille, Belgium (2015)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_07b29aa502cf13a8f66f0f9ae122e158 = L.circleMarker(
+                [48.1371079, 11.5753822],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_07b29aa502cf13a8f66f0f9ae122e158.bindTooltip(
+                `<div>
+                     <b>München, Germany (2014)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5126f3e3d7111f52ee28ec6c1a6264c4 = L.circleMarker(
+                [52.5089759, 6.0943765],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_5126f3e3d7111f52ee28ec6c1a6264c4.bindTooltip(
+                `<div>
+                     <b>Zwolle, the Netherlands (2018)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_29e424f4d07947cce0562a403a3b4071 = L.circleMarker(
+                [51.4392648, 5.478633],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_29e424f4d07947cce0562a403a3b4071.bindTooltip(
+                `<div>
+                     <b>Eindhoven, the Netherlands(2011)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_55ce19bee5684b27adca61c13fb101c6 = L.circleMarker(
+                [51.6889387, 5.303116],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_55ce19bee5684b27adca61c13fb101c6.bindTooltip(
+                `<div>
+                     <b>Den Bosch, the Netherlands (2012)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_69cfd2113a028cace8594b9d77418076 = L.circleMarker(
+                [52.07168255, 5.745510631034939],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_69cfd2113a028cace8594b9d77418076.bindTooltip(
+                `<div>
+                     <b>Ede, the Netherlands (2020)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0f9518ee741112091180f4bf5a1d28be = L.circleMarker(
+                [51.9685817, 5.668298061827958],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c1bf3790a7a59a845c8c8bbc897a0c30);
+        
+    
+            circle_marker_0f9518ee741112091180f4bf5a1d28be.bindTooltip(
+                `<div>
+                     <b>Wageningen, the Netherlands (2020)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var feature_group_272af29cb74b41e5ad2f01aeb5f8fe54 = L.featureGroup(
+                {}
+            ).addTo(map_d4cadb6c9df8e2a931f15324f83acd76);
+        
+    
+            var marker_87652f8642badd50f4c7113a2d06fba5 = L.marker(
+                [51.33154005, 4.087702848747496],
+                {"radius": 2}
+            ).addTo(feature_group_272af29cb74b41e5ad2f01aeb5f8fe54);
+        
+    
+            var icon_7495fee0d9adb9ed76cf1b44df01369f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_87652f8642badd50f4c7113a2d06fba5.setIcon(icon_7495fee0d9adb9ed76cf1b44df01369f);
+        
+    
+            marker_87652f8642badd50f4c7113a2d06fba5.bindTooltip(
+                `<div>
+                     <b>Hulst, the Netherlands (1993-2011)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c9f987db60ba5285e96336199e9ea810 = L.marker(
+                [52.1594747, 4.4908843],
+                {"radius": 2}
+            ).addTo(feature_group_272af29cb74b41e5ad2f01aeb5f8fe54);
+        
+    
+            var icon_9ab02e4752e493168716c82966b10dfc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_c9f987db60ba5285e96336199e9ea810.setIcon(icon_9ab02e4752e493168716c82966b10dfc);
+        
+    
+            marker_c9f987db60ba5285e96336199e9ea810.bindTooltip(
+                `<div>
+                     <b>Leiden, the Netherlands (2021-now)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e9c7036591bca596724dbb107192016e = L.marker(
+                [51.5887845, 4.7760237],
+                {"radius": 2}
+            ).addTo(feature_group_272af29cb74b41e5ad2f01aeb5f8fe54);
+        
+    
+            var icon_64f8ad8bae902859fa8f36c6c6698823 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_e9c7036591bca596724dbb107192016e.setIcon(icon_64f8ad8bae902859fa8f36c6c6698823);
+        
+    
+            marker_e9c7036591bca596724dbb107192016e.bindTooltip(
+                `<div>
+                     <b>Breda, the Netherlands (2011-2012)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_20b20e2a829deec14e90ebe1745e93ef = L.marker(
+                [52.086531750000006, 5.249007957671885],
+                {"radius": 2}
+            ).addTo(feature_group_272af29cb74b41e5ad2f01aeb5f8fe54);
+        
+    
+            var icon_9a70dee12dc15eb99ce3a38015f391fc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_20b20e2a829deec14e90ebe1745e93ef.setIcon(icon_9a70dee12dc15eb99ce3a38015f391fc);
+        
+    
+            marker_20b20e2a829deec14e90ebe1745e93ef.bindTooltip(
+                `<div>
+                     <b>Zeist, the Netherlands (2012-2014)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9001e7eb49956f7b2b3b91dfe6e628a1 = L.marker(
+                [52.080985600000005, 5.12768396945229],
+                {"radius": 2}
+            ).addTo(feature_group_272af29cb74b41e5ad2f01aeb5f8fe54);
+        
+    
+            var icon_05d3a24eea69cb1837f80cd41b58f22e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_9001e7eb49956f7b2b3b91dfe6e628a1.setIcon(icon_05d3a24eea69cb1837f80cd41b58f22e);
+        
+    
+            marker_9001e7eb49956f7b2b3b91dfe6e628a1.bindTooltip(
+                `<div>
+                     <b>Utrecht, the Netherlands (2014-2015)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cda30fc6698e7dfb3bd1eac9ddc5e4e6 = L.marker(
+                [52.2698936, 4.452685652490141],
+                {"radius": 2}
+            ).addTo(feature_group_272af29cb74b41e5ad2f01aeb5f8fe54);
+        
+    
+            var icon_1b22a8a89e1cf44ee368813d31dfcd8e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_cda30fc6698e7dfb3bd1eac9ddc5e4e6.setIcon(icon_1b22a8a89e1cf44ee368813d31dfcd8e);
+        
+    
+            marker_cda30fc6698e7dfb3bd1eac9ddc5e4e6.bindTooltip(
+                `<div>
+                     <b>Noordwijk, the Netherlands (2019)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c04ae5904188c3a5df17cac6fa439539 = L.marker(
+                [52.383705750000004, 4.643559696559635],
+                {"radius": 2}
+            ).addTo(feature_group_272af29cb74b41e5ad2f01aeb5f8fe54);
+        
+    
+            var icon_dad93069a433a22a50686d6e65865f93 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_c04ae5904188c3a5df17cac6fa439539.setIcon(icon_dad93069a433a22a50686d6e65865f93);
+        
+    
+            marker_c04ae5904188c3a5df17cac6fa439539.bindTooltip(
+                `<div>
+                     <b>Haarlem, the Netherlands (2019-2020)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9aff6bed84160f11e9222f7fd52d2e90 = L.marker(
+                [64.145981, -21.9422367],
+                {"radius": 2}
+            ).addTo(feature_group_272af29cb74b41e5ad2f01aeb5f8fe54);
+        
+    
+            var icon_4124fe6e50262c48715e5482d265e51a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_9aff6bed84160f11e9222f7fd52d2e90.setIcon(icon_4124fe6e50262c48715e5482d265e51a);
+        
+    
+            marker_9aff6bed84160f11e9222f7fd52d2e90.bindTooltip(
+                `<div>
+                     <b>Reykjavik, Iceland (2020)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cdf554a88b744013718e2c857c68e95f = L.marker(
+                [33.8439408, 9.400138],
+                {"radius": 2}
+            ).addTo(feature_group_272af29cb74b41e5ad2f01aeb5f8fe54);
+        
+    
+            var icon_67f7696f6eae380f9a31cf7e1dbf2a88 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_cdf554a88b744013718e2c857c68e95f.setIcon(icon_67f7696f6eae380f9a31cf7e1dbf2a88);
+        
+    
+            marker_cdf554a88b744013718e2c857c68e95f.bindTooltip(
+                `<div>
+                     <b>Tunis, Tunisia (2017)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2fb38a50f1da6ba4caff8519bf4d731e = L.marker(
+                [59.8586126, 17.6387436],
+                {"radius": 2}
+            ).addTo(feature_group_272af29cb74b41e5ad2f01aeb5f8fe54);
+        
+    
+            var icon_38cf4f841e001d5432dbabe9d0b5a95a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_2fb38a50f1da6ba4caff8519bf4d731e.setIcon(icon_38cf4f841e001d5432dbabe9d0b5a95a);
+        
+    
+            marker_2fb38a50f1da6ba4caff8519bf4d731e.bindTooltip(
+                `<div>
+                     <b>Uppsala, Sweden (2016-2017)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2be6f116c8a4b4107f6c94ed0c269b30 = L.marker(
+                [50.879202, 4.7011675],
+                {"radius": 2}
+            ).addTo(feature_group_272af29cb74b41e5ad2f01aeb5f8fe54);
+        
+    
+            var icon_479622a720f078de502e02311561259f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_2be6f116c8a4b4107f6c94ed0c269b30.setIcon(icon_479622a720f078de502e02311561259f);
+        
+    
+            marker_2be6f116c8a4b4107f6c94ed0c269b30.bindTooltip(
+                `<div>
+                     <b>Leuven, Belgium (2017-2018)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_083431a9b971252f6a45a8b17f0ffa41 = L.marker(
+                [51.0538286, 3.7250121],
+                {"radius": 2}
+            ).addTo(feature_group_272af29cb74b41e5ad2f01aeb5f8fe54);
+        
+    
+            var icon_9afb8d59fd0140de4b37bc501d00ad46 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_083431a9b971252f6a45a8b17f0ffa41.setIcon(icon_9afb8d59fd0140de4b37bc501d00ad46);
+        
+    
+            marker_083431a9b971252f6a45a8b17f0ffa41.bindTooltip(
+                `<div>
+                     <b>Gent, Belgium (2015-2016)</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var layer_control_8c64c8aa833305dd37c49e781712e69e = {
+                base_layers : {
+                },
+                overlays :  {
+                    "\u003cbr\u003e \u0026nbsp; Instagram stories \u0026nbsp; \u003ci class=\"fa fa-map-marker fa-2x\" style=\"color:darkblue\"\u003e\u003c/i\u003e" : feature_group_732878fde81f35a5bdbb8a58f18c8f40,
+                    "\u003cbr\u003e \u0026nbsp; Other trips \u0026nbsp; \u003ci class=\"fa fa-map-marker fa-2x\" style=\"color:red\"\u003e\u003c/i\u003e" : feature_group_c1bf3790a7a59a845c8c8bbc897a0c30,
+                    "\u003cbr\u003e \u0026nbsp; Places lived \u0026nbsp; \u003ci class=\"fa fa-map-marker fa-2x\" style=\"color:darkred\"\u003e\u003c/i\u003e" : feature_group_272af29cb74b41e5ad2f01aeb5f8fe54,
+                },
+            };
+            L.control.layers(
+                layer_control_8c64c8aa833305dd37c49e781712e69e.base_layers,
+                layer_control_8c64c8aa833305dd37c49e781712e69e.overlays,
+                {"autoZIndex": true, "collapsed": false, "position": "topleft"}
+            ).addTo(map_d4cadb6c9df8e2a931f15324f83acd76);
+        
+</script>
+</html>
