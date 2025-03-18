@@ -1083,181 +1083,86 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  *
  * ------------------------------------------------------------------- 
  */
+/* Ensure the header is fixed at the top */
 header {
-	position: fixed;
-	width: 100%;
-	min-height: 66px;
-	z-index: 600;
+    position: fixed;
+    width: 100%;
+    min-height: 66px;
+    z-index: 1000;
+    background: #000000;
+    display: flex;
+    justify-content: center; /* Centers the menu */
+    align-items: center;
 }
-header .row {
-	position: relative;
-	min-height: 66px;
-}
+
+/* Ensure the top bar spans the full width */
 header .top-bar {
-	display: block;
-	background: #000000;
-	min-width: 220px;
-	min-height: 66px;
-	position: absolute;
-	left: 90px;
-	top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 66px;
+    padding: 0 20px;
+    position: relative;
 }
+
+/* Remove the logo area */
 header .logo {
-	float: left;
-	margin-left: 20px;
-	margin-right: 50px;
-	margin-top: 25px;
-	position: relative;
+    display: none; /* Hides the 'Content' logo */
 }
+
 header .logo a {
-	display: block;
-	margin: 0;
-	padding: 0;
-	border: none;
-	font: 0/0 a;
-	text-shadow: none;
-	color: transparent;
-	width: 92px;
-	height: 15px;
-	background: url("../images/logo.png") no-repeat center;
-	background-size: 92px 15px;
+    display: block;
+    width: 92px;
+    height: 15px;
+    background: url("../images/logo.png") no-repeat center;
+    background-size: 92px 15px;
 }
 
-/**
- * menu toggle - (_layout.css)
- * ------------------------------------------------------------------- 
- */
+/* Remove menu toggle button */
 .menu-toggle {
-	float: left;
-	width: 40px;
-	height: 40px;
-	margin-left: 20px;
-	margin-top: 13px;
-	display: block;
-	position: relative;
-}
-.menu-toggle span {
-	display: block;
-	background-color: #FF0077;
-	width: 24px;
-	height: 3px;
-	margin-top: -1.5px;
-	font: 0/0 a;
-	text-shadow: none;
-	color: transparent;
-	position: absolute;
-	right: 8px;
-	top: 50%;
-	bottom: auto;
-	left: auto;
-	-moz-transition: background 0.2s ease-in-out;
-	-o-transition: background 0.2s ease-in-out;
-	-webkit-transition: background 0.2s ease-in-out;
-	-ms-transition: background 0.2s ease-in-out;
-	transition: background 0.2s ease-in-out;
-}
-.menu-toggle span::before, .menu-toggle span::after {
-	content: '';
-	width: 100%;
-	height: 100%;
-	background-color: inherit;
-	position: absolute;
-	left: 0;
-	-moz-transition-duration: 0.2s, 0.2s;
-	-o-transition-duration: 0.2s, 0.2s;
-	-webkit-transition-duration: 0.2s, 0.2s;
-	-ms-transition-duration: 0.2s, 0.2s;
-	transition-duration: 0.2s, 0.2s;
-	-moz-transition-delay: 0.2s, 0s;
-	-o-transition-delay: 0.2s, 0s;
-	-webkit-transition-delay: 0.2s, 0s;
-	-ms-transition-delay: 0.2s, 0s;
-	transition-delay: 0.2s, 0s;
-}
-.menu-toggle span::before {
-	top: -8px;
-	-moz-transition-property: top, transform;
-	-o-transition-property: top, transform;
-	-webkit-transition-property: top, transform;
-	-ms-transition-property: top, transform;
-	transition-property: top, transform;
-}
-.menu-toggle span::after {
-	bottom: -8px;
-	-moz-transition-property: bottom, transform;
-	-o-transition-property: bottom, transform;
-	-webkit-transition-property: bottom, transform;
-	-ms-transition-property: bottom, transform;
-	transition-property: bottom, transform;
+    display: none;
 }
 
-/* is clicked */
-.menu-toggle.is-clicked span {
-	background-color: rgba(255, 0, 119, 0);
-}
-.menu-toggle.is-clicked span::before, .menu-toggle.is-clicked span::after {
-	background-color: #ff0077;
-	-moz-transition-delay: 0s, 0.2s;
-	-o-transition-delay: 0s, 0.2s;
-	-webkit-transition-delay: 0s, 0.2s;
-	-ms-transition-delay: 0s, 0.2s;
-	transition-delay: 0s, 0.2s;
-}
-.menu-toggle.is-clicked span::before {
-	top: 0;
-	-webkit-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
-	transform: rotate(45deg);
-}
-.menu-toggle.is-clicked span::after {
-	bottom: 0;
-	-webkit-transform: rotate(-45deg);
-	-ms-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-}
-
-/* navigation panel */
+/* Navigation container */
 #main-nav-wrap {
-	display: block;
-	width: 100%;
-	font-family: "poppins-medium", sans-serif;
-	font-size: 1.5rem;
-	position: absolute;
-	top: 100%;
-	left: 0;
+    width: 100%;
+    text-align: center;
 }
 
-/* dropdown nav */
+/* Display menu items in a row */
 .main-navigation {
-	background: #000000;
-	padding: 24px 30px 42px;
-	margin: 0;
-	width: 100%;
-	height: auto;
-	clear: both;
-	display: none;
+    display: flex;
+    justify-content: center; /* Centers menu items */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 30px; /* Space between items */
 }
-.main-navigation > li {
-	display: block;
-	height: auto;
-	text-align: left;
-	padding: 0;
+
+/* Style menu items */
+.main-navigation li {
+    display: inline-block;
 }
+
+/* Make menu items uppercase */
 .main-navigation li a {
-	display: block;
-	color: #FFFFFF;
-	width: auto;
-	padding: 15px 0;
-	line-height: 16px;
-	border: none;
+    display: inline-block;
+    color: #FFFFFF;
+    padding: 20px 15px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "poppins-semibold", sans-serif;
 }
+
 .main-navigation li a:hover {
-	color: #FF0077;
-	padding-left: 1rem;
+    color: #FF0077;
 }
+
+/* Highlight active page */
 .main-navigation li.current > a {
-	background: none;
-	color: #FF0077;
+    color: #FF0077;
 }
 
 /**

@@ -138,26 +138,17 @@
   	/* Navigation Menu
    ------------------------------------------------------ */  
    var toggleButton = $('.menu-toggle'),
-       nav = $('.main-navigation');
+   nav = $('.main-navigation');
 
-   // toggle button
-   toggleButton.on('click', function(e) {
+// Remove the toggle functionality entirely (optional)
+toggleButton.hide(); // Hide the toggle button since it's not needed anymore
 
-		e.preventDefault();
-		toggleButton.toggleClass('is-clicked');
-		nav.slideToggle();
+// Ensure the navigation is always visible
+nav.show(); // This makes sure the menu stays visible
 
-	});
+// Remove the click event that hides the menu
+nav.find('li a').off("click"); // This removes the event listener that hides the menu
 
-   // nav items
-  	nav.find('li a').on("click", function() {   
-
-   	// update the toggle button 		
-   	toggleButton.toggleClass('is-clicked'); 
-   	// fadeout the navigation panel
-   	nav.fadeOut();   		
-   	     
-  	});
 
 
    /*---------------------------------------------------- */
