@@ -1,1704 +1,506 @@
 <!DOCTYPE html>
-<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Jurjen de Jong</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<style>
+:root{
+  --bg:#0f1116;
+  --text:#e4e6eb;
+  --sidebar:#161a22;
+  --accent:#e4e6eb;
+  --card:#1c212b;
+  --muted:#7d8695;
+}
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* or 'Merriweather', serif */
+    color: var(--text);
+    background: linear-gradient(rgba(15,17,22,0.85), rgba(15,17,22,0.85)), url("images/bg.jpg") no-repeat center top;
+    background-size: cover;
+    background-attachment: scroll; /* important for mobile! */
+}
 
-   <!--- basic page needs
-   ================================================== -->
-   <meta charset="utf-8">
-	<title>Jurjen</title>
-	<meta name="description" content="">  
-	<meta name="Jurjen de Jong" content="">
+/* Main content links: default white, hover pink */
+.content a:link,
+.content a:visited,
+.content a:active {
+    color: var(--text); /* white-ish text */
+    text-decoration: none;
+    transition: color 0.3s;
+}
 
-   <!-- mobile specific metas
-   ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+.content a:hover {
+    color: #ff8fb0; /* pink on hover */
+}
 
- 	<!-- CSS
-   ================================================== -->
-   <link rel="stylesheet" href="css/base.css">  
-   <link rel="stylesheet" href="css/main.css">
-   <link rel="stylesheet" href="css/vendor.css">     
+/* Optional: ensure the main content doesn’t overflow on small screens */
+.content {
+    margin-left: 270px;
+    padding: 60px;
+    max-width: 950px;
+}
 
-   <!-- script
-   ================================================== -->   
-	<script src="js/modernizr.js"></script>
-	<script src="js/pace.min.js"></script>
+@media (max-width: 900px) {
+    .content {
+        margin-left: 0;
+        padding: 30px 20px;
+    }
+    .hero {
+        height: 200px;
+        font-size: 24px;
+    }
+}
 
-   <!-- favicons
-	================================================== -->
-	<link rel="icon" type="image/png" href="favicon.png">
+.item-year {
+    font-size: 14px;
+}
 
+
+
+/* Make 'Present' bold */
+.item-year::after {
+    content: '';
+}
+.item-year strong {
+    font-weight: 700;
+}
+
+/* Sidebar */
+.sidebar{ width:270px; height:100vh; background:var(--sidebar); position:fixed; padding:40px 30px; display:flex; flex-direction:column; justify-content:space-between; }
+.profile{text-align:center;}
+.profile img{ width:120px; border-radius:50%; margin-bottom:15px; }
+.profile h1{ font-size:22px; margin:5px 0; }
+.profile p{ font-size:14px; color:var(--muted); }
+nav{ margin-top:30px; }
+nav a{ display:block; padding:8px 0; text-decoration:none; color:var(--text); font-weight:500;}
+nav a:hover{ color:var(--accent); }
+.buttons{ margin-top:20px; text-align:center; }
+.buttons a{ display:inline-block; color:var(--text); text-decoration:none; font-size:14px; margin:4px 6px; }
+.buttons a:hover{ color:var(--accent); }
+
+/* Buttons / social links */
+.buttons a {
+    transition: color 0.3s;
+}
+
+.buttons a:hover {
+    color: #ffb6c1;
+}
+
+/* Collapsible cards titles */
+.item-row:hover .item-title {
+    color: #ffb6c1;
+}
+
+
+/* Sidebar stays untouched */
+.sidebar nav a {
+    color: var(--text); /* default sidebar text */
+    transition: color 0.3s;
+}
+
+.sidebar nav a:hover {
+    color: var(--accent); /* original accent on hover */
+}
+
+/* Content */
+.content{
+    margin-left:270px;
+    padding:60px;
+    max-width:950px;
+}
+
+section{
+    margin-bottom:60px;
+    text-align:center;
+}
+
+h2{
+    margin-bottom:30px;
+    font-weight:600;
+}
+
+/* Cards */
+.card{ background:var(--card); padding:25px; border-radius:12px; max-width:800px; margin:0 auto; text-align:left; }
+.item{ margin-bottom:20px; }
+.item-row{ display:flex; justify-content:space-between; align-items:flex-start; cursor:pointer; }
+.item-left{ flex:1; }
+.item-right{ flex-shrink:0; text-align:right; color:var(--muted); font-size:14px; margin-left:20px; }
+.item-title{ font-weight:600; }
+.item-sub{ font-size:14px; color:var(--muted); display:block; margin-top:2px; }
+.item-content{ max-height:0; overflow:hidden; transition:max-height 0.35s ease; margin-top:5px; font-size:14px; }
+.item-row:hover .item-title{ color:var(--accent); }
+
+/* Footer */
+footer{ margin-top:80px; color:var(--muted); font-size:14px; text-align:center; }
+
+/* Mobile */
+.menu-toggle{ display:none; font-size:26px; cursor:pointer; margin-bottom:10px; }
+@media(max-width:900px){
+  .container{ flex-direction:column; }
+  .sidebar{ position:relative; width:100%; height:auto; padding:20px; }
+  .profile img{ width:80px; }
+  .menu-toggle{ display:block; text-align:right; }
+  nav{ display:none; margin-top:15px; }
+  nav.show{ display:block; }
+  .content{ margin-left:0; padding:30px 20px; }
+  .hero{ height:200px; font-size:24px; }
+  .card{ padding:20px; }
+}
+</style>
 </head>
+<body>
+<div class="container">
 
-<body id="top">
+<!-- Sidebar -->
+<aside class="sidebar">
+  <div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="profile">
+      <img src="images/jurjen.png" alt="Profile Picture">
+      <h1>Dr. Jurjen de Jong</h1>
+      <p><strong>Radio Astronomer | Software Developer</strong><br>Leiden University & ASTRON</p>
+    </div>
+    <nav id="nav">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#publications">Publications</a>
+      <a href="#map">Travel map</a>
+      <a href="#contact">Contact</a>
 
-	<!-- header 
-   ================================================== -->
-   <header>   	
-    <div class="row">
-        <div class="top-bar">
-            <div class="logo">
-                <a href="index.html">Content</a>
-            </div>		      
+    </nav>
+    <div class="buttons">
+      <a href="https://scholar.google.com/citations?user=JvUidjUAAAAJ&hl=nl&oi=ao"><i class="fas fa-graduation-cap"></i> Scholar</a>
+      <a href="https://orcid.org/0000-0001-6876-8719"><i class="fab fa-orcid"></i> ORCID</a>
+      <a href="https://github.com/jurjen93"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/jurjendejong93/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="documents/academic_cv_jurjen.pdf"><i class="fas fa-file-pdf"></i> CV</a>
+    </div>
+  </div>
+</aside>
 
-            <nav id="main-nav-wrap">
-                <ul class="main-navigation">
-                    <li class="current"><a class="smoothscroll" href="#intro" title="">Home</a></li>
-                    <li><a class="smoothscroll" href="#about" title="">About</a></li>
-<!--                    <li><a class="smoothscroll" href="#resume" title="">Resume</a></li>-->
-                    <li><a class="smoothscroll" href="#portfolio" title="">Portfolio</a></li>
-                    <li><a class="smoothscroll" href="#publications" title="">Publications</a></li>
-<!--                    <li><a class="smoothscroll" href="#inthenews" title="">In the News</a></li>-->
-                    <li><a class="smoothscroll" href="#software" title="">Software</a></li>
-					<li><a href="maps/travel.html" title="">Travel map</a></li>
-                </ul>
-            </nav>    		
-        </div> <!-- /top-bar --> 
-    </div> <!-- /row --> 		
-</header> <!-- /header -->
+<!-- Main Content -->
+<main class="content">
+  <div class="hero"></div>
 
-	<!-- intro section
-   ================================================== -->
-   <section id="intro">   
-
-   	<div class="intro-overlay"></div>	
-
-   	<div class="intro-content">
-   		<div class="row">
-
-   			<div class="col-twelve">
-
-	   			<h1>Dr. Jurjen de Jong</h1>
-
-	   			<p class="intro-position">
-	   				<span>Radio Astronomer</span> 
-					<span>Software developer</span>
-	   			</p>
-
-	   			<a class="button stroke smoothscroll" href="#about" title="">Profile</a>
-
-	   		</div>  
-   			
-   		</div>   		 		
-   	</div> <!-- /intro-content --> 
-
-   	<ul class="intro-social">
-		<li><a href="documents/academic_cv_jurjen.pdf" class="fa fa-paperclip" download title="My CV"></a></li>
-		<li><a href="https://github.com/jurjen93" class="fa fa-github" download title="My Github"></a></li>
-		<li><a href="https://www.instagram.com/jurjong/" class="fa fa-instagram" download title="My Instagram"></a></li>
-		<li><a href="https://www.linkedin.com/in/jurjendejong93/" class="fa fa-linkedin" download title="My LinkedIn"></a></li>
-      </ul> <!-- /intro-social -->      	
-
-   </section> <!-- /intro -->
-
-
-   <!-- about section
-   ================================================== -->
-   <section id="about">  
-
-   	<div class="row section-intro">
-   		<div class="col-twelve">
-
-   			<h5>Profile</h5>
-   			<h1>Dr. Jurjen de Jong</h1>
-
-
-   				<img src="images/jurjen.png" alt="Profile Picture" style="width: 110px; height:110px">
-
-
-   		</div>   		
-   	</div> <!-- /section-intro -->
-
-   	<div class="row about-content">
-
-
-        <div class="col-twelve">
-
-			<p>I am a researcher, radio astronomer, and software developer at <a href="https://www.universiteitleiden.nl/en/science/astronomy">Leiden Observatory</a> and <a href="https://www.astron.nl/">ASTRON</a>.
+  <!-- About -->
+  <section id="about">
+    <h2>About</h2>
+    <div class="card">
+			I am a researcher at <a href="https://www.universiteitleiden.nl/en/science/astronomy">Leiden Observatory</a> and <a href="https://www.astron.nl/">ASTRON</a>.
                 My work focuses on developing and improving data-reduction strategies
                 and techniques for automated processing of radio interferometric data from the European <a href="https://www.astron.nl/telescopes/lofar/">LOw Frequency ARray (LOFAR)</a> to produce wide-field
                 sub-arcsecond resolution images on HPC clusters from <a href="https://www.surf.nl/">Surf</a>. Scientifically, I am also
                 interested in studying the cosmic evolution of radio galaxies and the mergers of galaxy clusters.
-            </p>
-            <p>
-                Previously, I have developed data-driven machine-learning pipelines at <a href="https://matrixian.com/en/">Matrixian Group</a>,
-                interned as a mathematical astronomer at the <a href="https://www.esa.int/">European Space Agency</a> and as a mechanical engineer at <a href="https://eppm.com.tn/">EPPM</a>,
-                and wrote popular scientific articles for <a href="https://scientias.nl/author/jurjen-de-jong/">Scientias</a>.
-				My educational background includes bachelor’s degrees in Mathematics and Physics, an MSc in Mathematics, an advanced MSc in Space Studies, and a PhD in Radio Astronomy.
-				I am also a co-founder of <a href="www.stamily.org">Stamily</a>, which is
-                a non-profit organisation that supports and connects people around the world who happen to have a stutter.
-            </p>
-		</div>
-
-   	</div>
-
-   	<div class="row button-section">
-
-        <div class="col-twelve">
-   			<a href="documents/academic_cv_jurjen.pdf" title="Academic CV" class="button button-primary">Academic CV</a>
-   		</div>
-
-   		<div class="col-twelve">
-   			<a href="documents/short_cv_jurjen.pdf" title="Short CV" class="button button-primary">Short CV</a>
-   		</div>
-   	</div>
-
-   </section> <!-- /process-->
-   
-
-
-   <!-- resume Section
-   ================================================== -->
-<!--	<section id="resume" class="grey-section">-->
-
-<!--		<div class="row section-intro">-->
-<!--   		<div class="col-twelve">-->
-
-<!--   			<h5>Timeline</h5>-->
-<!--   			<h1>Resume.</h1>-->
-
-<!--   			<p class="lead">-->
-<!--				Below you can find my work experiences and educational background.</p>-->
-<!--   		</div>   		-->
-<!--   	</div> &lt;!&ndash; /section-intro&ndash;&gt; -->
-
-<!--   	<div class="row resume-timeline">-->
-<!--		  -->
-<!--   		<div class="col-twelve resume-header">-->
-
-<!--   			<h2>Work Experience</h2>-->
-
-<!--   		</div> &lt;!&ndash; /resume-header &ndash;&gt;-->
-
-<!--   		<div class="col-twelve">-->
-
-<!--   			<div class="timeline-wrap">-->
-
-<!--				<div class="timeline-block">-->
-
-<!--					<div class="timeline-ico">-->
-<!--					 <i class="fa fa-briefcase"></i>-->
-<!--				 </div>-->
-
-<!--					<div class="timeline-header">-->
-<!--						<h3>Software developer (part-time)</h3>-->
-<!--						<p>January 2025 - Present</p>-->
-<!--					</div>-->
-
-<!--					<div class="timeline-content">-->
-<!--						<h4>ASTRON</h4>-->
-<!--						<p> As part of a collaboration between Leiden Observatory and ASTRON, I am developing tools and workflows for the LOFAR VLBI calibration and imaging pipeline.-->
-<!--					 </p>-->
-<!--					</div>-->
-
-<!--				</div> &lt;!&ndash; /timeline-block &ndash;&gt;-->
-
-<!--				<div class="timeline-block">-->
-
-<!--					<div class="timeline-ico">-->
-<!--					 <i class="fa fa-briefcase"></i>-->
-<!--				 </div>-->
-
-<!--					<div class="timeline-header">-->
-<!--						<h3>Radio Astronomer</h3>-->
-<!--						<p>January 2021 - Present</p>-->
-<!--					</div>-->
-
-<!--					<div class="timeline-content">-->
-<!--						<h4>Leiden Observatory</h4>-->
-<!--						<p> Developing techniques and strategies for LOFAR VLBI calibration and imaging with the aim to study radio galaxy evolution.-->
-<!--							I was also a teaching assistant for the master course 'Radio Astronomy' and supervisor of several bachelor and master research projects.-->
-<!--							From 2021 to 2024 in the role as PhD candidate and from 2025 until now as a postdoc.-->
-<!--					 </p>-->
-<!--					</div>-->
-
-<!--				</div> &lt;!&ndash; /timeline-block &ndash;&gt;-->
-
-<!--				<div class="timeline-block">-->
-
-<!--					<div class="timeline-ico">-->
-<!--					 <i class="fa fa-briefcase"></i>-->
-<!--				 </div>-->
-
-<!--					<div class="timeline-header">-->
-<!--						<h3>Volunteer</h3>-->
-<!--						<p>August 2018 - Present</p>-->
-<!--					</div>-->
-
-<!--					<div class="timeline-content">-->
-<!--						<h4>Stamily</h4>-->
-<!--						<p> I co-founded the non-profit <a href="www.stamily.org">Stamily</a>, which fosters a supportive community for people who stutter.-->
-<!--							As first chair of the board, I took up a leading role in the management of the association.-->
-<!--					 </p>-->
-<!--					</div>-->
-
-<!--				</div> &lt;!&ndash; /timeline-block &ndash;&gt;-->
-
-<!--				<div class="timeline-block">-->
-
-<!--					<div class="timeline-ico">-->
-<!--					 <i class="fa fa-briefcase"></i>-->
-<!--				 </div>-->
-
-<!--					<div class="timeline-header">-->
-<!--						<h3>Data Scientist</h3>-->
-<!--						<p>August 2019 - January 2021</p>-->
-<!--					</div>-->
-
-<!--					<div class="timeline-content">-->
-<!--						<h4>Matrixian Group</h4>-->
-<!--						<p>Developed machine learning pipelines, address validators, and APIs for various clients.-->
-<!--							See projects <a class="smoothscroll"  href="#portfolio" title="">below</a>.-->
-<!--					 </p>-->
-<!--					</div>-->
-
-<!--				</div> &lt;!&ndash; /timeline-block &ndash;&gt;-->
-
-<!--				<div class="timeline-block">-->
-
-<!--					<div class="timeline-ico">-->
-<!--					 <i class="fa fa-briefcase"></i>-->
-<!--				 </div>-->
-
-<!--					<div class="timeline-header">-->
-<!--						<h3>Mathematical Astronomer (intern)</h3>-->
-<!--						<p>September 2019 - January 2020</p>-->
-<!--					</div>-->
-
-<!--					<div class="timeline-content">-->
-<!--						<h4>European Space Agency</h4>-->
-<!--						<p>Investigated patterns in stellar-distance data from Gaia DR2. This work resulted in a <a href="https://www.aanda.org/articles/aa/full_html/2020/10/aa37256-19/aa37256-19.html">publication in Astronomy & Astrophysics</a>.-->
-<!--							Astrobites also wrote an article about <a href="https://astrobites.org/2020/10/01/template-post-3/">this work</a>.-->
-<!--					 </p>-->
-<!--					</div>-->
-
-<!--				</div> &lt;!&ndash; /timeline-block &ndash;&gt;-->
-
-<!--   				<div class="timeline-block">-->
-
-<!--	   				<div class="timeline-ico">-->
-<!--						<i class="fa fa-briefcase"></i>-->
-<!--					</div>-->
-
-<!--	   				<div class="timeline-header">-->
-<!--	   					<h3>Science writer</h3>-->
-<!--	   					<p>August 2017 - January 2020</p>-->
-<!--	   				</div>-->
-
-<!--	   				<div class="timeline-content">-->
-<!--	   					<h4>Scientias</h4>-->
-<!--	   					<p>Wrote popular science articles about physics, mathematics, history, computing,-->
-<!--							and the space industry. You can find my articles-->
-<!--							<a href="https://scientias.nl/author/jurjen-de-jong/">here</a>.-->
-<!--						</p>-->
-<!--	   				</div>-->
-
-<!--	   			</div> &lt;!&ndash; /timeline-block &ndash;&gt;-->
-
-<!--	   			<div class="timeline-block">-->
-
-<!--	   				<div class="timeline-ico">-->
-<!--						<i class="fa fa-briefcase"></i>-->
-<!--					</div>-->
-
-<!--	   				<div class="timeline-header">-->
-<!--	   					<h3>Mechanical Engineer (intern)</h3>-->
-<!--	   					<p>June 2017 - August 2017</p>-->
-<!--	   				</div>-->
-
-<!--	   				<div class="timeline-content">-->
-<!--	   					<h4>EPPM (Tunisia)</h4>-->
-<!--	   					<p>Worked on automating calculations for determining the stresses on lifting lugs.-->
-<!--						</p>-->
-<!--	   				</div>-->
-<!--				-->
-<!--				</div> &lt;!&ndash; /timeline-block &ndash;&gt;-->
-
-<!--   			</div> &lt;!&ndash; /timeline-wrap &ndash;&gt;   			-->
-
-<!--   		</div> &lt;!&ndash; /col-twelve &ndash;&gt;-->
-<!--   		-->
-<!--   	</div> &lt;!&ndash; /resume-timeline &ndash;&gt;-->
-<!--   	-->
-<!--   	<div class="row resume-timeline">-->
-
-<!--   		<div class="col-twelve resume-header">-->
-
-<!--   			<h2>Education</h2>-->
-
-<!--   		</div> &lt;!&ndash; /resume-header &ndash;&gt;-->
-
-<!--   		<div class="col-twelve">-->
-
-<!--			<div class="timeline-block">-->
-
-<!--				<div class="timeline-ico">-->
-<!--					<i class="fa fa-graduation-cap"></i>-->
-<!--				</div>-->
-
-<!--				<div class="timeline-header">-->
-<!--					<h3>PhD degree</h3>-->
-<!--					<h5>Radio astronomy</h5>-->
-<!--					<p>2021-2025</p>-->
-<!--				</div>-->
-
-<!--				<div class="timeline-content">-->
-<!--					<h4>Leiden University (the Netherlands)-->
-<!--					</h4>-->
-<!--					<p>During my PhD, I studied galaxy cluster mergers and radio galaxy evolution and developed techniques for wide-field sub-arcsecond imaging with LOFAR.-->
-<!--					</p>-->
-<!--				</div>-->
-<!--			</div> &lt;!&ndash; /timeline-block &ndash;&gt;-->
-
-<!--			<div class="timeline-block">-->
-
-<!--				<div class="timeline-ico">-->
-<!--					<i class="fa fa-graduation-cap"></i>-->
-<!--				</div>-->
-
-<!--				<div class="timeline-header">-->
-<!--					<h3>Summer school</h3>-->
-<!--					<p>2018-2018</p>-->
-<!--				</div>-->
-
-<!--				<div class="timeline-content">-->
-<!--					<h4>National Cheng Kung University (Taiwan)-->
-<!--					</h4>-->
-<!--					<p>During the summer of 2018, I studied Chinese/Taiwanese culture and language with a scholarship from Leuven University.						-->
-<!--					</p>-->
-<!--				</div>-->
-
-<!--			   -->
-<!--			   </div> &lt;!&ndash; /timeline-block &ndash;&gt;-->
-
-<!--			<div class="timeline-block">-->
-
-<!--				<div class="timeline-ico">-->
-<!--					<i class="fa fa-graduation-cap"></i>-->
-<!--				</div>-->
-
-<!--				<div class="timeline-header">-->
-<!--					<h3>Advanced Master's degree</h3>-->
-<!--					<h5>Space Studies</h5>-->
-<!--					<p>2017-2018</p>-->
-<!--				</div>-->
-
-<!--				<div class="timeline-content">-->
-<!--					<h4>Leuven University (Belgium)-->
-<!--					</h4>-->
-<!--					<p>During this advanced master's program, I studied various topics related to the space industry, including space biology, law, technology, science, and more.-->
-<!--					</p>-->
-<!--				</div>-->
-
-<!--			   </div> &lt;!&ndash; /timeline-block &ndash;&gt;-->
-
-<!--			-->
-<!--			<div class="timeline-block">-->
-
-<!--				<div class="timeline-ico">-->
-<!--					<i class="fa fa-graduation-cap"></i>-->
-<!--				</div>-->
-
-<!--				<div class="timeline-header">-->
-<!--					<h3>Erasmus exchange</h3>-->
-<!--					<p>2016-2017</p>-->
-<!--				</div>-->
-
-<!--				<div class="timeline-content">-->
-<!--					<h4>Uppsala University (Sweden)-->
-<!--					</h4>-->
-<!--					<p>As part of the Erasmus+ exchange, I followed astronomy and physics courses as part of my master's degree in mathematics in Ghent.-->
-<!--				</div>-->
-
-<!--			   </div> &lt;!&ndash; /timeline-block &ndash;&gt;-->
-
-
-<!--			   <div class="timeline-block">-->
-
-<!--				<div class="timeline-ico">-->
-<!--					<i class="fa fa-graduation-cap"></i>-->
-<!--				</div>-->
-
-<!--				<div class="timeline-header">-->
-<!--					<h3>Master's degree</h3>-->
-<!--					<h5>Mathematics</h5>-->
-<!--					<p>2015-2017</p>-->
-<!--				</div>-->
-
-<!--				<div class="timeline-content">-->
-<!--					<h4>Ghent University (Belgium)</h4>-->
-<!--					<p>I completed courses about applied/fundamental mathematics, astronomy, theoretical physics, and quantum computing. -->
-<!--						My final thesis was about applying the analytical Fox-H function on the Nuker Model.</p>-->
-<!--				</div>-->
-
-<!--			   </div> &lt;!&ndash; /timeline-block &ndash;&gt;-->
-
-<!--			   <div class="timeline-block">-->
-
-<!--				<div class="timeline-ico">-->
-<!--					<i class="fa fa-graduation-cap"></i>-->
-<!--				</div>-->
-
-<!--				<div class="timeline-header">-->
-<!--					<h3>Bachelor's degree</h3>-->
-<!--					<h5>Physics</h5>-->
-<!--					<p>2013-2015</p>-->
-<!--				</div>-->
-
-<!--				<div class="timeline-content">-->
-<!--					<h4>Utrecht University (the Netherlands)</h4>-->
-<!--					<p>I completed courses about fundamental physics, including quantum mechanics, special relativity, advanced Newtonian mechanics, and more. -->
-<!--						For my bachelor's thesis project, I analysed the Ganita-Yukti-Bhasa, originally written in Malayalam/Sanskriet.</p>-->
-<!--				</div>-->
-
-<!--			   </div> &lt;!&ndash; /timeline-block &ndash;&gt;-->
-
-<!--	   			<div class="timeline-block">-->
-
-<!--					<div class="timeline-ico">-->
-<!--						<i class="fa fa-graduation-cap"></i>-->
-<!--					</div>-->
-
-<!--					<div class="timeline-header">-->
-<!--						<h3>Bachelor's degree</h3>-->
-<!--						<h5>Mathematics</h5>-->
-<!--						<p>2012-2015</p>-->
-<!--					</div>-->
-
-<!--					<div class="timeline-content">-->
-<!--						<h4>Utrecht University (the Netherlands)</h4>-->
-<!--						<p>I focused on both fundamental mathematics and its applications in physics and astronomy. I also included -->
-<!--							history and philosophy courses, which were part of the minor in history and philosophy of science.-->
-<!--						</p>-->
-<!--					</div>-->
-
-<!--	   			</div> &lt;!&ndash; /timeline-block &ndash;&gt;-->
-
-<!--	   			<div class="timeline-block">-->
-
-<!--	   				<div class="timeline-ico">-->
-<!--	   					<i class="fa fa-graduation-cap"></i>-->
-<!--	   				</div>-->
-
-<!--	   				<div class="timeline-header">-->
-<!--	   					<h3>Propadeautics</h3>-->
-<!--						<h5>Mechanical Engineering</h5>-->
-<!--	   					<p>2011-2012</p>-->
-<!--	   				</div>-->
-
-<!--	   				<div class="timeline-content">-->
-<!--	   					<h4>Avans Breda (the Netherlands)</h4>-->
-<!--	   					<p>I completed the first year of Mechanical Engineering. During this year, I realised that I am more inclined towards theoretical work than practical engineering.	-->
-<!--					</div>-->
-
-<!--	   			</div> &lt;!&ndash; /timeline-block &ndash;&gt;-->
-
-<!--   			</div> &lt;!&ndash; /timeline-wrap &ndash;&gt;   			-->
-
-<!--   		</div> &lt;!&ndash; /col-twelve &ndash;&gt;-->
-<!--   		-->
-<!--   	</div> &lt;!&ndash; /resume-timeline &ndash;&gt;-->
-<!--		-->
-<!--	</section> &lt;!&ndash; /features &ndash;&gt;-->
-
-
-	<!-- Portfolio Section
-   ================================================== -->
-	<section id="portfolio">
-
-		<div class="row section-intro">
-   		<div class="col-twelve">
-
-   			<h5>Portfolio</h5>
-   			<h1>Project experience</h1>
-   			<p class="lead">Below I listed projects I've either contributed to as a team member or lead myself.</p>
-   		</div>
-   	</div> <!-- /section-intro-->
-
-   	<div class="row portfolio-content">
-
-   		<div class="col-twelve">
-
-			<!-- portfolio-wrapper -->
-				<div id="folio-wrapper" class="block-1-2 block-mob-full stack">
-
-				<div class="bgrid folio-item">
-					<div class="item-wrap">
-						<img src="images/deepelais.gif" alt="sva">
-						<a href="#modal-10" class="overlay">
-							<div class="folio-item-table">
-								<div class="folio-item-cell">
-									<h3 class="folio-title">PILOT development</h3>
-											<span class="folio-types">
-												Software developer
-										</span>
-										</div>
-							</div>
-						</a>
-					</div>
-						</div> <!-- /folio-item -->
-
-				<div class="bgrid folio-item">
-					<div class="item-wrap">
-						<img src="images/portfolio/barchart_compute_1obs.png" alt="sva">
-						<a href="#modal-09" class="overlay">
-							<div class="folio-item-table">
-								<div class="folio-item-cell">
-									<h3 class="folio-title">LOFAR VLBI pipeline improvements</h3>
-											<span class="folio-types">
-												Software developer
-										</span>
-										</div>
-							</div>
-						</a>
-					</div>
-						</div> <!-- /folio-item -->
-
-				<div class="bgrid folio-item">
-					<div class="item-wrap">
-						<img src="images/portfolio/sva.png" alt="sva">
-						<a href="#modal-08" class="overlay">
-							<div class="folio-item-table">
-								<div class="folio-item-cell">
-									<h3 class="folio-title">Sidereal visibility averaging</h3>
-											<span class="folio-types">
-												Software developer
-										</span>
-										</div>
-							</div>
-						</a>
-					</div>
-						</div> <!-- /folio-item -->
-
-
-				<div class="bgrid folio-item">
-					<div class="item-wrap">
-						<img src="images/widefield.png" alt="mergingclusters">
-						<a href="#modal-07" class="overlay">
-							<div class="folio-item-table">
-								<div class="folio-item-cell">
-									<h3 class="folio-title">Deepest sub-arcsecond LOFAR image</h3>
-											<span class="folio-types">
-												Astronomer
-										</span>
-										</div>
-							</div>
-						</a>
-					</div>
-						</div> <!-- /folio-item -->
-
-
-				<div class="bgrid folio-item">
-					<div class="item-wrap">
-						<img src="images/bg.jpg" alt="mergingclusters">
-					   <a href="#modal-06" class="overlay">
-						  <div class="folio-item-table">
-							  <div class="folio-item-cell">
-								  <h3 class="folio-title">Merging Galaxy Clusters</h3>
-										  <span class="folio-types">
-											   Astronomer
-										</span>
-									 </div>
-						  </div>
-					   </a>
-					</div>
-					 </div> <!-- /folio-item -->
-
-
-	         	<div class="bgrid folio-item">
-	               <div class="item-wrap">
-	               	<img src="images/portfolio/Gaia.jpeg" alt="Gaia">
-	                  <a href="#modal-01" class="overlay">
-	                     <div class="folio-item-table">
-	                     	<div class="folio-item-cell">
-		     					       <h3 class="folio-title">Benford's law in Gaia DR2</h3>
-		     					    	 <span class="folio-types">
-		     					       	  Mathematical Astronomer
-		     					       </span>
-		     					   </div>
-	                     </div>
-	                  </a>
-	               </div>
-	        		</div> <!-- /folio-item -->
-
-	        		<div class="bgrid folio-item">
-	               <div class="item-wrap">
-	               	<img src="images/portfolio/greenroof.jpg" alt="greenroof">
-	               	<a href="#modal-02" class="overlay">
-	                     <div class="folio-item-table">
-	                     	<div class="folio-item-cell">
-	                     		<h3 class="folio-title">Greenroof project</h3>
-		     					    	<span class="folio-types">
-		     					       	 Data scientist
-		     					      </span>
-		     					   </div>
-	                     </div>
-	                  </a>
-	               </div>
-	        		</div> <!-- /folio-item -->
-
-	            <div class="bgrid folio-item">
-	               <div class="item-wrap">
-	               	<img src="images/portfolio/volksbank.jpg"alt="volksbank">
-	                  <a href="#modal-03" class="overlay">
-	                     <div class="folio-item-table">
-	                     	<div class="folio-item-cell">
-	                     		<h3 class="folio-title">Mortgage Prepayment Prediction</h3>
-		     					    	<span class="folio-types">
-		     					       	  Machine Learning Engineer
-		     					      </span>
-		     					   </div>
-	                     </div>
-	                  </a>
-	               </div>
-	        		</div> <!-- /folio-item -->
-
-	            <div class="bgrid folio-item">
-	               <div class="item-wrap">
-	               	<img src="images/portfolio/mailboxes.jpeg" alt="addresschecker">
-	                  <a href="#modal-04" class="overlay">
-	                     <div class="folio-item-table">
-	                     	<div class="folio-item-cell">
-	                     		<h3 class="folio-title">Address Checker</h3>
-		     					    	<span class="folio-types">
-		     					       	  Data scientist
-		     					      </span>
-		     					   </div>
-	                     </div>
-	                  </a>
-	               </div>
-	        		</div> <!-- /folio-item -->
-
-	        		<div class="bgrid folio-item">
-	               <div class="item-wrap">
-	               	<img src="images/portfolio/housevalue.jpg" alt="avm">
-	                  <a href="#modal-05" class="overlay">
-	                     <div class="folio-item-table">
-	                     	<div class="folio-item-cell">
-	                     		<h3 class="folio-title">Automated Valuation Model</h3>
-		     					    	<span class="folio-types">
-		     					       	  Data scientist / Machine Learning Engineer
-		     					      </span>
-		     					   </div>
-	                     </div>
-	                  </a>
-	               </div>
-	        		</div> <!-- /folio-item -->
-
-
-
-	            <!-- modal popups - begin
-	            ============================================================= -->
-				<div id="modal-10" class="popup-modal slider mfp-hide">
-
-					<div class="media">
-						<img src="images/deepelais.gif" alt="" />
-					</div>
-
-				  <div class="description-box">
-					 <h4>PILOT development</h4>
-					 <p>I helped developing the Pipeline for the International LOFAR Telescope (PILOT).
-						 This is a calibration and imaging pipeline that includes all of LOFAR’s international
-						 stations to achieve sub-arcsecond resolution.
-					 </p>
-
-					 <div class="categories">Software development</div>
-				  </div>
-
-				<div class="link-box">
-				   <a href="https://github.com/LOFAR-VLBI/pilot">Software</a>
-					 <a href="#" class="popup-modal-dismiss">Close</a>
-				</div>
-
-				<div id="modal-09" class="popup-modal slider mfp-hide">
-
-					<div class="media">
-						<img src="images/portfolio/barchart_compute_1obs.png" alt="" />
-					</div>
-
-				  <div class="description-box">
-					 <h4>LOFAR VLBI pipeline improvements</h4>
-					 <p>I improved the LOFAR VLBI pipeline, achieving a tenfold computational performance improvement compared with the initial implementation.
-					 </p>
-
-					 <div class="categories">Software development</div>
-				  </div>
-
-				<div class="link-box">
-				   <a href="https://ui.adsabs.harvard.edu/abs/2025MNRAS.542.3253D/abstract">Publication</a>
-					 <a href="#" class="popup-modal-dismiss">Close</a>
-				</div>
-
-				<div id="modal-08" class="popup-modal slider mfp-hide">
-
-					<div class="media">
-						<img src="images/portfolio/sva.png" alt="" />
-					</div>
-
-				  <div class="description-box">
-					 <h4>Sidereal visibility averaging</h4>
-					 <p>I developed software to combine interferometric datasets from multiple telescope observations of the same sky into a much smaller dataset.
-						 This reduces costs for data storage significantly and results in computational improvements up to a factor of 14 for 3.000 hours of observation time.
-					 </p>
-
-					 <div class="categories">Software development</div>
-				  </div>
-
-				<div class="link-box">
-				   <a href="https://www.aanda.org/articles/aa/pdf/2025/02/aa52492-24.pdf">Publication</a>
-					 <a href="#" class="popup-modal-dismiss">Close</a>
-				</div>
-
-
-				<div id="modal-07" class="popup-modal slider mfp-hide">
-
-					<div class="media">
-						<img src="images/widefield.png" alt="" />
-					</div>
-
-				  <div class="description-box">
-					 <h4>Deepest sub-arcsecond wide-field image with LOFAR</h4>
-					 <p>I lead the work to obtain the deepest wide-field image with LOFAR at sub-arcsecond resolutions. We also improved the strategy of
-						calibrating the data to make wide-field images across 2.5 by 2.5 degrees on the sky, containing 10^10 pixels.
-					 </p>
-
-					 <div class="categories">Astronomy</div>
-				  </div>
-
-				<div class="link-box">
-				   <a href="">Publication</a>
-					 <a href="#" class="popup-modal-dismiss">Close</a>
-				</div>
-
-			  </div> <!-- /modal-07 -->
-
-				<div id="modal-06" class="popup-modal slider mfp-hide">
-
-					<div class="media">
-						<img src="images/bg.jpg" alt="" />
-					</div>
-
-				  <div class="description-box">
-					 <h4>Merging galaxy clusters (A399-401)</h4>
-					 <p>I lead a study about the merging clusters A399 and A401. We created the deepest low-frequency radio map and used this to study
-					   the re-acceleration of the cosmic rays in the radio bridge between the galaxy clusters. In our paper we argue that second-order Fermi re-acceleration
-					   is currently the most favored process to explain the radio bridge. Image credits: F. Sweijen.
-					 </p>
-
-					 <div class="categories">Astronomy</div>
-				  </div>
-
-				<div class="link-box">
-				   <a href="https://www.aanda.org/articles/aa/full_html/2022/12/aa44346-22/aa44346-22.html">Publication</a>
-					 <a href="#" class="popup-modal-dismiss">Close</a>
-				</div>
-
-			  </div> <!-- /modal-06 -->
-
-	            <div id="modal-01" class="popup-modal slider mfp-hide">
-
-				     	<div class="media">
-				     		<img src="images/portfolio/Gaia.jpeg" alt="" />
-				     	</div>
-
-					   <div class="description-box">
-					      <h4>Benford's law in Gaia DR2</h4>
-					      <p>As a spinoff of my internship at the European Space Agency, I continued with my supervisor in my free time to publish the results of my work that I used for my Master thesis. This lead to a publication in <a href="https://www.aanda.org/articles/aa/full_html/2020/10/aa37256-19/aa37256-19.html">Astronomy & Astrophysics</a>.
-							In this project we found, in contradiction with earlier results, that the distances between stars from the Gaia DR2 dataset do not follow the famous <a href="https://scientias.nl/de-wet-van-benford-bizar-en-nog-onverklaarbaar/">Benford's law</a>.
-							Image credits: ESA
-							<div class="categories">Astronomy</div>
-					   </div>
-
-			         <div class="link-box">
-			            <a href="https://www.aanda.org/articles/aa/full_html/2020/10/aa37256-19/aa37256-19.html">Publication</a>
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>
-
-				   </div> <!-- /modal-01 -->
-
-				   <div id="modal-02" class="popup-modal slider mfp-hide">
-
-				     	<div class="media">
-				     		<img src="images/portfolio/greenroof.jpg" alt="" />
-				     	</div>
-
-					   <div class="description-box">
-					      <h4>Greenroof project</h4>
-					      <p>As part of my traineeship at Matrixian Group, I created together with fellow trainees a map to locate places where
-							Amsterdam could be greened on street and roof level.
-							My role was to collect data and write code to do calculations. Image credits: wikimedia commons</p>
-					      <div class="categories">Data science</div>
-					   </div>
-
-			         <div class="link-box">
-			            <a href="https://www.matrixian.com/en/story/green-rooftop/">Details</a>
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>
-
-				   </div> <!-- /modal-02 -->
-
-				   <div id="modal-03" class="popup-modal slider mfp-hide">
-
-				     	<div class="media">
-				     		<img src="images/portfolio/volksbank.jpg" alt="" />
-				     	</div>
-
-					   <div class="description-box">
-					      <h4>Mortgage prepayment prediction</h4>
-						  <p>As part of a short project in collaboration between Matrixian Group and the Volksbank,
-							I built together with a colleague a machine learning model to predict mortgage prepayments by combining several data sources. Image credits: wikimedia commons</p>
-					      <div class="categories">Machine Learning</div>
-					   </div>
-
-			         <div class="link-box">
-			            <a href="https://www.banken.nl/nieuws/22057/hoe-het-voorspellen-van-verhuizingen-leidt-tot-meer-inzicht-bij-pricing-en-asset-managers">Publication</a>
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>
-
-				   </div> <!-- /modal-03 -->
-
-				   <div id="modal-04" class="popup-modal slider mfp-hide">
-
-				     	<div class="media">
-				     		<img src="images/portfolio/mailboxes.jpeg" alt="" />
-				     	</div>
-
-					   <div class="description-box">
-					      <h4>Address Checker</h4>
-					      <p>As part of my work at Matrixian Group, I helped developing an address checker that can validate if an address exists all around the world.
-							My main role in this project was writing code to parse any type of international address. Image credits: Myself
-					      <div class="categories">Data science</div>
-					   </div>
-
-			         <div class="link-box">
-			            <a href="https://www.matrixian.com/en/producten/international-address-checker/">Details</a>
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>
-
-				   </div> <!-- /modal-04 -->
-
-				   <div id="modal-05" class="popup-modal slider mfp-hide">
-
-				     	<div class="media">
-				     		<img src="images/portfolio/housevalue.jpg" alt="" />
-				     	</div>
-
-					   <div class="description-box">
-					      <h4>Automated Valuation Model</h4>
-						  <p>As part of my work at Matrixian Group, I contributed to the development of an
-							<a href="https://en.wikipedia.org/wiki/Automated_valuation_model">Automated Valuation Model (AVM)</a>.
-							My role was to build the machine learning model together with one of my colleagues and to collect and analyse
-							available data that we could use as data to train our model on.
-							Image credits: freepik.com
-					      <div class="categories">Data science</div>
-					   </div>
-			         <div class="link-box">
-			            <a href="https://www.matrixian.com/automated-valuation-model/">Details</a>
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>
-
-				   </div> <!-- /modal-05 -->
-
-
-
-
-				   <!-- modal popups - end
-	            ============================================================= -->
-
-	         </div> <!-- /portfolio-wrapper -->
-
-   		</div>  <!-- /twelve -->
-
-   	 </div> <!-- /portfolio-content -->
-
-	</section> <!-- /portfolio -->
 
     </div>
-
-
-		<!-- publications -->
-    <section id="publications" class="grey-section">
-	
-		</div> <!-- /row -->
-	
-		<div class="row half-bottom">
-	
-			<div class="row section-intro">
-				<div class="col-twelve">
-			<h5>Science</h5>
-			<h1>Publications</h1>
-			<p class="lead">You will find below my contributions to publications in scientific journals and some of the popular science articles and blogs that I have written for various websites.</p>
-	  
-			
-			</div>   		
-		</div> <!-- /section-intro -->
-
-		<h2>First-authored</h2>
-
-		<table>
-			<thead>
-				<tr>
-					<th>Title</th>
-					<th>Lead author</th>
-					<th>Journal/publisher</th>
-					<th>Year</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td><a href="https://ui.adsabs.harvard.edu/abs/2025MNRAS.542.3253D/abstract">Scalable and robust wide-field facet calibration with LOFAR's longest baselines</a></td>
-					<td>J.M.G.H.J. de Jong</td>
-					<td>Monthly Notices of the Royal Astronomical Society</td>
-					<td>2025</td>
-				</tr>
-				<tr>
-					<td><a href="https://books.gildeprint.nl/thesis/52689-deJong/">PhD Thesis</a></td>
-					<td>J.M.G.H.J. de Jong</td>
-					<td>Gildeprint</td>
-					<td>2025</td>
-				</tr>
-				<tr>
-					<td><a href="https://ui.adsabs.harvard.edu/abs/2025A%26A...694A..98D/abstract">Unlocking ultra-deep wide-field imaging with sidereal visibility averaging</a></td>
-					<td>J.M.G.H.J. de Jong</td>
-					<td>Astronomy & Astrophysics</td>
-					<td>2025</td>
-				</tr>
-				<tr>
-					<td><a href="https://ui.adsabs.harvard.edu/abs/2024arXiv240713247D/abstract">Into the Depths: Unveiling ELAIS-N1 with LOFAR's deepest sub-arcsecond wide-field images</a></td>
-					<td>J.M.G.H.J. de Jong</td>
-					<td>Astronomy & Astrophysics</td>
-					<td>2024</td>
-				</tr>
-				<tr>
-					<td><a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...683A..23D/abstract">Cosmic evolution of FRI and FRII sources out to z=2.5</a></td>
-					<td>J.M.G.H.J. de Jong</td>
-					<td>Astronomy & Astrophysics</td>
-					<td>2024</td>
-				</tr>
-				<tr>
-					<td><a href="https://ui.adsabs.harvard.edu/abs/2022A%26A...668A.107D/abstract">Deep study of A399-401: Application of a wide-field facet calibration</a></td>
-					<td>J.M.G.H.J. de Jong</td>
-					<td>Astronomy & Astrophysics</td>
-					<td>2022</td>
-				</tr>
-				<tr>
-					<td><a href="https://ui.adsabs.harvard.edu/abs/2020A%26A...642A.205D/abstract">Benford's law in the Gaia Universe</a></td>
-					<td>J.M.G.H.J. de Jong</td>
-					<td>Astronomy & Astrophysics</td>
-					<td>2020</td>
-				</tr>
-				<!-- Add more rows as needed -->
-			</tbody>
-		</table>
-
-		<hr>
-
-		<h2>Co-authored</h2>
-		<table>
-			<thead>
-				<tr>
-					<th>Title</th>
-					<th>Lead author</th>
-					<th>Journal/publisher</th>
-					<th>Year</th>
-				</tr>
-			</thead>
-			<tbody>
-			<tr>
-				<td><a href="https://arxiv.org/abs/2602.23046">The LOFAR sub-arcsecond view of the high-redshift radio relic in PSZ2G091.83+26.11</a></td>
-				<td>G. Di Gennaro</td>
-				<td>Astronomy & Astrophysics</td>
-				<td>2026</td>
-			</tr>
-			<tr>
-				<td><a href="https://ui.adsabs.harvard.edu/abs/2026arXiv260215949S/abstract">The LOFAR Two-metre Sky Survey: VII. Third Data Release</a></td>
-				<td>T.W. Shimwell</td>
-				<td>Astronomy & Astrophysics</td>
-				<td>2026</td>
-			</tr>
-			<tr>
-				<td><a href="https://ui.adsabs.harvard.edu/abs/2026MNRAS.tmp..256E/abstract">The sub-arcsecond ILT view of the Boötes Deep Field: A link between low-frequency kiloparsec radio morphology and AGN driven ionised outflows</a></td>
-				<td>E.L. Escott</td>
-				<td>Monthly Notices of the Royal Astronomical Society</td>
-				<td>2026</td>
-			</tr>
-			<tr>
-				<td><a href="https://ui.adsabs.harvard.edu/abs/2026MNRAS.546ag054V/abstract"> MeerKAT observations of Abell 1775 and Abell 1795: the discovery of a hadronic radio halo?</a></td>
-				<td>R.J. van Weeren</td>
-				<td>Monthly Notices of the Royal Astronomical Society</td>
-				<td>2026</td>
-			</tr>
-			<tr>
-				<td><a href="https://zenodo.org/records/17854379">Building Capacity for FAIR and Open Science: Insights from the World Café sessions at the OSCARS 1st AGM</a></td>
-				<td>D. Romain</td>
-				<td>Open Research Europe Journal</td>
-				<td>2025</td>
-			</tr>
-			<tr>
-				<td><a href="https://ui.adsabs.harvard.edu/abs/2025arXiv251219471D/abstract">Revealing the intricacies of radio galaxies and filaments in the merging galaxy cluster Abell 2255. II. Properties of filaments using multi-frequency radio data</a></td>
-				<td>E. De Rubeis</td>
-				<td>Astronomy & Astrophysics</td>
-				<td>2025</td>
-			</tr>
-			<tr>
-				<td><a href="https://ui.adsabs.harvard.edu/abs/2025MNRAS.tmp..936C/abstract">Radio-loud AGN morphology and host-galaxy properties in the LOFAR Two-Metre Sky Survey Data Release 2</a></td>
-				<td>L. Clews</td>
-				<td>Monthly Notices of the Royal Astronomical Society</td>
-				<td>2025</td>
-			</tr>
-			<tr>
-				<td><a href="https://ui.adsabs.harvard.edu/abs/2025A%26A...699A.229D/abstract">Revealing the intricacies of radio galaxies and filaments in the merging galaxy cluster Abell 2255: I. Insights from deep LOFAR-VLBI sub-arcsecond resolution images</a></td>
-				<td>E. De Rubeis</td>
-				<td>Astronomy & Astrophysics</td>
-				<td>2025</td>
-			</tr>
-			<tr>
-				<td><a href="https://ui.adsabs.harvard.edu/abs/2025Ap%26SS.370...19M/abstract">A decade of sub-arcsecond imaging with the International LOFAR Telescope</a></td>
-				<td>L.K. Morabito</td>
-				<td>Astrophysics and Space Science</td>
-				<td>2025</td>
-			</tr>
-			<tr>
-				<td><a href="https://ui.adsabs.harvard.edu/abs/2025arXiv250104093S/abstract">The LOFAR Two-metre Sky Survey: Deep Fields Data Release 2</a></td>
-				<td>T. W. Shimwell</td>
-				<td>Astronomy & Astrophysics</td>
-				<td>2025</td>
-			</tr>
-			<tr>
-				<td><a href="https://ui.adsabs.harvard.edu/abs/2025MNRAS.536L..32M/abstract">A hidden active galactic nucleus population: the first radio luminosity functions constructed by physical process</a></td>
-				<td>L.K. Morabito</td>
-				<td>Monthly Notices of the Royal Astronomical Society</td>
-				<td>2024</td>
-			</tr>
-			<tr>
-				<td><a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...685L..10P/abstract">Abell 0399-Abell 0401 radio bridge spectral index: the first multifrequency detection</a></td>
-				<td>G.V. Pignataro</td>
-				<td>Astronomy & Astrophysics</td>
-				<td>2024</td>
-			</tr>
-			<tr>
-				<td><a href="https://ui.adsabs.harvard.edu/abs/2024NatAs...8..786G/abstract">The Decameter sky at sub-arcminute resolution</a></td>
-				<td>C. Groeneveld</td>
-				<td>Nature Astronomy</td>
-				<td>2024</td>
-			</tr>
-			<tr>
-				<td><a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...691A.347Y/abstract">1-arcsecond imaging of the ELAIS-N1 field at 144MHz using the LoTSS survey with the international LOFAR telescope</a></td>
-				<td>H. Ye</td>
-				<td>Astronomy & Astrophysics</td>
-				<td>2024</td>
-			</tr>
-			</tbody>
-		</table>
-
-<!--		<hr>-->
-
-<!--		<h2>Talks</h2>-->
-
-<!--		<table>-->
-<!--			<thead>-->
-<!--				<tr>-->
-<!--					<th>Title</th>-->
-<!--					<th>Conference</th>-->
-<!--					<th>Type</th>-->
-<!--					<th>Location</th>-->
-<!--					<th>Year</th>-->
-<!--				</tr>-->
-<!--			</thead>-->
-<!--			<tbody>-->
-<!--                <tr>-->
-<!--					<td>AI for LOFAR calibration</td>-->
-<!--					<td>Machine learning journal club</td>-->
-<!--					<td>Talk</td>-->
-<!--					<td>Durham (UK)</td>-->
-<!--					<td>2025</td>-->
-<!--				</tr>-->
-<!--                <tr>-->
-<!--					<td>Probing the most distant objects with the full European LOFAR</td>-->
-<!--					<td>Quasar journal club</td>-->
-<!--					<td>Talk</td>-->
-<!--					<td>Durham (UK)</td>-->
-<!--					<td>2025</td>-->
-<!--				</tr>-->
-<!--                <tr>-->
-<!--					<td>Advancing LOFAR imaging workflows to unveil the deep high-resolution universe</td>-->
-<!--					<td>CORTEX annual meeting</td>-->
-<!--					<td>Talk</td>-->
-<!--					<td>Online</td>-->
-<!--					<td>2025</td>-->
-<!--				</tr>-->
-<!--                <tr>-->
-<!--					<td>The deepest radio image using PILoT</td>-->
-<!--					<td>International VLBI Technology Workshop</td>-->
-<!--					<td>Talk</td>-->
-<!--					<td>Gothenburg (Sweden)</td>-->
-<!--					<td>2025</td>-->
-<!--				</tr>-->
-<!--                <tr>-->
-<!--					<td>Influential people who stutter you did not yet know</td>-->
-<!--					<td>World Congress for People who Stutter</td>-->
-<!--					<td>Talk</td>-->
-<!--					<td>Rovaniemi (Finland)</td>-->
-<!--					<td>2025</td>-->
-<!--				</tr>-->
-<!--                <tr>-->
-<!--					<td>The deepest radio image</td>-->
-<!--					<td>LOFAR Family meeting 2025</td>-->
-<!--					<td>Talk</td>-->
-<!--					<td>Paris (France)</td>-->
-<!--					<td>2025</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td>Unlocking the sub-arcsecond radio universe with LOFAR</td>-->
-<!--					<td>NAC</td>-->
-<!--					<td>Plenary talk</td>-->
-<!--					<td>Berg en Dal (the Netherlands)</td>-->
-<!--					<td>2025</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td>Unlocking the sub-arcsecond radio universe with LOFAR</td>-->
-<!--					<td>Colloquium</td>-->
-<!--					<td>Invited talk</td>-->
-<!--					<td>Gothenburg (Sweden)</td>-->
-<!--					<td>2025</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td>Cosmic Depth and Detail</td>-->
-<!--					<td>Colloquium</td>-->
-<!--					<td>PhD colloquium</td>-->
-<!--					<td>Leiden (the Netherlands)</td>-->
-<!--					<td>2025</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td>Creating a FAIR open Science Pipeline for high-resolution LOFAR imaging (COPLI)</td>-->
-<!--					<td>OSCARS AGM</td>-->
-<!--					<td>Flash talk</td>-->
-<!--					<td>Rome (Italy)</td>-->
-<!--					<td>2025</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td>Towards the LOFAR 2.0 era with deep sub-arcsecond wide-field imaging</td>-->
-<!--					<td>Colloquium</td>-->
-<!--					<td>Invited talk</td>-->
-<!--					<td>ASTRON (the Netherlands)</td>-->
-<!--					<td>2025</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td>Automated sub-arcsecond wide-field imaging with LOFAR</td>-->
-<!--					<td>ADASS 2024</td>-->
-<!--					<td>Talk</td>-->
-<!--					<td>Valletta (Malta)</td>-->
-<!--					<td>2024</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td>Ultra-deep sub-arcsecond wide-field imaging with LOFAR</td>-->
-<!--					<td>Teaser talk</td>-->
-<!--					<td>Invited talk</td>-->
-<!--					<td>ASTRON (the Netherlands)</td>-->
-<!--					<td>2024</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td>Into the depth: Deepest 0.3" wide-field images with LOFAR</td>-->
-<!--					<td>LOFAR Family meeting 2024</td>-->
-<!--					<td>Talk</td>-->
-<!--					<td>Leiden (the Netherlands)</td>-->
-<!--					<td>2024</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td>Into the depth: Deepest 0.3" wide-field images with LOFAR</td>-->
-<!--					<td>URSI 2024</td>-->
-<!--					<td>Talk</td>-->
-<!--					<td>Gran Canaria (Spain)</td>-->
-<!--					<td>2024</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td>Unveiling ELAIS-N1 with LOFAR's deepest sub-arcsecond wide-field images</td>-->
-<!--					<td>SPARCS</td>-->
-<!--					<td>Talk</td>-->
-<!--					<td>Bologna (Italy)</td>-->
-<!--					<td>2024</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td>Deep sub-arcsecond calibration and imaging of ELAIS-N1</td>-->
-<!--					<td>SALF (Science At Low Frequencies)</td>-->
-<!--					<td>Talk</td>-->
-<!--					<td>Amsterdam (the Netherlands)</td>-->
-<!--					<td>2023</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td><a href="documents/ELAIS_N1_poster.pdf">ELAIS-N1 at sub-arcseconds</a></td>-->
-<!--					<td>LOFAR Family Meeting 2023</td>-->
-<!--					<td>Poster</td>-->
-<!--					<td>Olsztyn (Poland)</td>-->
-<!--					<td>2023</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td>ELAIS-N1 at 1" - Towards sub-arcsecond resolution</td>-->
-<!--					<td>Deep Field symposium 2023</td>-->
-<!--					<td>Talk</td>-->
-<!--					<td>Online</td>-->
-<!--					<td>2023</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td>Stamily</td>-->
-<!--					<td>World Congress for People who Stutter</td>-->
-<!--					<td>Talk</td>-->
-<!--					<td>Liverpool (United Kingdom)</td>-->
-<!--					<td>2022</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td>Influential people who stutter</td>-->
-<!--					<td>World Congress for People who Stutter</td>-->
-<!--					<td>Talk</td>-->
-<!--					<td>Liverpool (United Kingdom)</td>-->
-<!--					<td>2022</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td>A deep study of A399-401</td>-->
-<!--					<td>SPARCS</td>-->
-<!--					<td>Talk</td>-->
-<!--					<td>Johannesburg (South-Africa)</td>-->
-<!--					<td>2022</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td>A deep study of A399-401</td>-->
-<!--					<td>IAU</td>-->
-<!--					<td>Talk</td>-->
-<!--					<td>Busan (South-Korea)</td>-->
-<!--					<td>2022</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td>Stamily</td>-->
-<!--					<td>World Congress for People who Stutter</td>-->
-<!--					<td>Talk</td>-->
-<!--					<td>Hveragerði (Iceland)</td>-->
-<!--					<td>2019</td>-->
-<!--				</tr>-->
-<!--				&lt;!&ndash; Add more rows as needed &ndash;&gt;-->
-<!--			</tbody>-->
-<!--		</table>-->
-
-		<hr>
-	
-		<h2>Blogs/Popular science</h2>
-
-		<table>
-			<thead>
-				<tr>
-					<th>Title</th>
-					<th>Author(s)</th>
-					<th>Website</th>
-					<th>Year</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td><a href="https://towardsdatascience.com/how-to-make-a-video-from-your-astronomy-images-957f1d40dea1">How to Make a Video from Your (Astronomy) Images</a></td>
-					<td>Jurjen de Jong</td>
-					<td>Towards Data Science</td>
-					<td>2021</td>
-				</tr>
-				<tr>
-					<td><a href="https://towardsdatascience.com/benfords-law-in-the-gaia-universe-b5727db7a936">Benford's law and distances to stars</a></td>
-					<td>Jurjen de Jong</td>
-					<td>Towards Data Science</td>
-					<td>2020</td>
-				</tr>
-				<tr>
-					<td><a href="https://scientias.nl/google-claimt-quantumsuprematie-wat-is-het-en-wat-brengt-het-ons/">Google claimt quantumsuprematie: wat is het en wat brengt het ons?</a></td>
-					<td>Jurjen de Jong</td>
-					<td>Scientias</td>
-					<td>2019</td>
-				</tr>
-				<tr>
-					<td><a href="https://scientias.nl/hoe-het-menselijke-brein-ons-inspireerde-slimme-ai-te-maken/">Hoe het menselijke brein ons inspireerde slimme AI te maken</a></td>
-					<td>Jurjen de Jong</td>
-					<td>Scientias</td>
-					<td>2019</td>
-				</tr>
-				<tr>
-					<td><a href="https://scientias.nl/de-slimme-stad-een-utopie-of-een-dystopie/">De slimme stad: een utopie of een dystopie?</a></td>
-					<td>Jurjen de Jong</td>
-					<td>Scientias</td>
-					<td>2019</td>
-				</tr>
-				<tr>
-					<td><a href="https://scientias.nl/kunstmatige-intelligentie-is-niet-zo-hip-en-modern-als-je-misschien-denkt/">Kunstmatige intelligentie: heel hip, maar niet per se modern</a></td>
-					<td>Jurjen de Jong</td>
-					<td>Scientias</td>
-					<td>2019</td>
-				</tr>
-				<tr>
-					<td><a href="https://scientias.nl/wat-is-de-rol-van-japan-in-de-ruimtevaart/">Wat is de rol van Japan in de ruimtevaart?</a></td>
-					<td>Jurjen de Jong</td>
-					<td>Scientias</td>
-					<td>2019</td>
-				</tr>
-				<tr>
-					<td><a href="https://scientias.nl/china-is-hard-op-weg-om-ook-de-ruimte-te-domineren/">Gaat China de ruimte domineren?</a></td>
-					<td>Jurjen de Jong</td>
-					<td>Scientias</td>
-					<td>2019</td>
-				</tr>
-				<tr>
-					<td><a href="https://scientias.nl/wordt-india-een-concurrent-van-de-andere-grote-ruimtevaartlanden/">Wordt India een concurrent van de andere grote ruimtevaartlanden?</a></td>
-					<td>Jurjen de Jong</td>
-					<td>Scientias</td>
-					<td>2019</td>
-				</tr>
-				<tr>
-					<td><a href="https://scientias.nl/nieuwe-maanmissie-bewijst-dat-we-ruimtevaartland-india-niet-moeten-onderschatten/">Nieuwe maanmissie bewijst dat we ruimtevaartland India niet moeten onderschatten</a></td>
-					<td>Jurjen de Jong</td>
-					<td>Scientias</td>
-					<td>2019</td>
-				</tr>
-				<tr>
-					<td><a href="https://scientias.nl/galileo-het-europese-navigatiesysteem-dat-gps-van-de-troon-gaat-stoten/">Galileo: het Europese navigatiesysteem dat GPS van de troon gaat stoten</a></td>
-					<td>Jurjen de Jong</td>
-					<td>Scientias</td>
-					<td>2018</td>
-				</tr>
-				<tr>
-					<td><a href="https://scientias.nl/is-de-riemann-hypothese-echt-opgelost/">Is de Riemann-hypothese echt opgelost?</a></td>
-					<td>Jurjen de Jong</td>
-					<td>Scientias</td>
-					<td>2018</td>
-				</tr>
-				<tr>
-					<td><a href="https://scientias.nl/de-wet-van-benford-bizar-en-nog-onverklaarbaar/">De wet van Benford: bizar en nóg onverklaarbaar</a></td>
-					<td>Jurjen de Jong</td>
-					<td>Scientias</td>
-					<td>2018</td>
-				</tr>
-				<tr>
-					<td><a href="https://scientias.nl/george-lemai%cc%82tre-de-geestelijk-vader-van-de-big-bang-theorie/">George Lemaître: de 'geestelijk' vader van de Big Bang-theorie</a></td>
-					<td>Jurjen de Jong</td>
-					<td>Scientias</td>
-					<td>2018</td>
-				</tr>
-				<tr>
-					<td><a href="https://scientias.nl/draagt-kosmische-straling-bij-aan-de-opwarming-van-de-aarde/">Draagt kosmische straling bij aan de opwarming van de aarde?</a></td>
-					<td>Jurjen de Jong</td>
-					<td>Scientias</td>
-					<td>2018</td>
-				</tr>
-				<tr>
-					<td><a href="https://scientias.nl/ik-ga-op-ruimtereis-en-kom-tegen-dodelijke-straling/">We gaan op ruimtereis en komen tegen: levensgevaarlijke straling</a></td>
-					<td>Jurjen de Jong</td>
-					<td>Scientias</td>
-					<td>2018</td>
-				</tr>
-				<tr>
-					<td><a href="https://scientias.nl/parker-solar-probe-deze-nieuwe-ruimtesonde-gaat-de-zon-aantikken/">Parker Solar Probe: deze nieuwe ruimtesonde gaat de zon aantikken</a></td>
-					<td>Jurjen de Jong</td>
-					<td>Scientias</td>
-					<td>2018</td>
-				</tr>
-				<tr>
-					<td><a href="https://scientias.nl/zeilen-op-de-zonnewind-hoe-werkt-dat-en-wat-brengt-het-ons/">Zeilen op fotonen en de zonnewind: hoe werkt dat en wat brengt het ons?</a></td>
-					<td>Jurjen de Jong</td>
-					<td>Scientias</td>
-					<td>2018</td>
-				</tr>
-				<tr>
-					<td><a href="https://scientias.nl/hoe-gaat-de-quantumcomputer-jouw-leven-veranderen/">Hoe gaat de quantumcomputer jouw leven veranderen?</a></td>
-					<td>Jurjen de Jong</td>
-					<td>Scientias</td>
-					<td>2018</td>
-				</tr>
-				<tr>
-					<td><a href="https://scientias.nl/klaar-voor-een-revolutie-hier-komt-de-quantumcomputer/">Klaar voor een revolutie? Hier komt de quantumcomputer!</a></td>
-					<td>Jurjen de Jong</td>
-					<td>Scientias</td>
-					<td>2018</td>
-				</tr>
-				<tr>
-					<td><a href="https://scientias.nl/ruimtelift-geweldige-idee-werkelijkheid-worden/">De ruimtelift: kan dit geweldige idee werkelijkheid worden?</a></td>
-					<td>Jurjen de Jong</td>
-					<td>Scientias</td>
-					<td>2017</td>
-				</tr>
-				<tr>
-					<td><a href="https://scientias.nl/moet-ruimtevaart-groener/">Moet de ruimtevaart groener?</a></td>
-					<td>Jurjen de Jong</td>
-					<td>Scientias</td>
-					<td>2017</td>
-				</tr>
-				<!-- Add more rows as needed -->
-			</tbody>
-		</table>
-
-			
-
-		</div>
-	
-	</section>
-
-
-<!--		<section id="inthenews" class="grey-section">-->
-
-<!--		</div> &lt;!&ndash; /row &ndash;&gt;-->
-
-<!--		<div class="row half-bottom">-->
-
-<!--			<div class="row section-intro">-->
-<!--				<div class="col-twelve">-->
-
-<!--			<h5>Outreach</h5>-->
-<!--			<h1>In the News</h1>-->
-<!--			<p class="lead">You will find below my appearances in news outlets on various platforms.</p>-->
-
-
-<!--			</div>-->
-<!--		</div> &lt;!&ndash; /section-intro &ndash;&gt;-->
-
-<!--		<table>-->
-<!--			<thead>-->
-<!--				<tr>-->
-<!--					<th>Title</th>-->
-<!--					<th>Platform</th>-->
-<!--					<th>Role</th>-->
-<!--					<th>Year</th>-->
-<!--				</tr>-->
-<!--			</thead>-->
-<!--			<tbody>-->
-<!--				<tr>-->
-<!--					<td><a href="https://www.astronomie.nl/promoties/unlocking-cosmic-depth-and-detail-promotie-jurjen-de-jong-ul-807">Unlocking cosmic depth and detail (promotie Jurjen de Jong, UL)</a></td>-->
-<!--					<td>astronomie.nl</td>-->
-<!--					<td>Topic</td>-->
-<!--					<td>2025</td>-->
-<!--				</tr>-->
-
-<!--				<tr>-->
-<!--					<td><a href="https://www.lannoo.be/nl/iedereen-ruimtevaarder">Iedereen ruimtevaarder</a></td>-->
-<!--					<td>Book written by Nancy Vermeulen</td>-->
-<!--					<td>Interviewee</td>-->
-<!--					<td>2021</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td><a href="https://fais.uj.edu.pl/wydzial/ogloszenia/-/journal_content/56_INSTANCE_8AfLQeBmM1sp/41628/147728578">Naukowcy z UJ publikują obrazy radiowe młodego Wszechświata</a></td>-->
-<!--					<td>Jagiellonian University</td>-->
-<!--					<td>Content provider</td>-->
-<!--					<td>2021</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td><a href="https://scitechdaily.com/ultra-sensitive-deep-radio-images-reveal-thousands-of-star-forming-galaxies-in-early-universe/">Ultra-Sensitive Deep Radio Images Reveal Thousands of Star-Forming Galaxies in Early Universe</a></td>-->
-<!--					<td>SciTechDaily</td>-->
-<!--					<td>Content provider</td>-->
-<!--					<td>2021</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td><a href="https://astrobites.org/2020/10/01/template-post-3/">On stars, distances, and tax fraud</a></td>-->
-<!--					<td>Astrobites</td>-->
-<!--					<td>Reviewed</td>-->
-<!--					<td>2020</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td><a href="https://www.destentor.nl/vechtdal/nooit-meer-aarzelen-om-het-stotteren-na-het-stotterkamp-in-lemele~aaf13b9d/">Nooit meer aarzelen om het stotteren na het stotterkamp in Lemele</a></td>-->
-<!--					<td>De Stentor</td>-->
-<!--					<td>Interviewee</td>-->
-<!--					<td>2019</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td><a href="https://www.parool.nl/ps/stamily-is-een-internationaal-platform-voor-stotteraars~baf59c68">Stamily is een internationaal platform voor stotteraars</a></td>-->
-<!--					<td>Parool</td>-->
-<!--					<td>Interviewee</td>-->
-<!--					<td>2019</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td><a href="https://www.banken.nl/nieuws/22057/hoe-het-voorspellen-van-verhuizingen-leidt-tot-meer-inzicht-bij-pricing-en-asset-managers">Hoe het voorspellen van verhuizingen leidt tot meer inzicht bij pricing en asset managers</a></td>-->
-<!--					<td>banken.nl</td>-->
-<!--					<td>Interviewee</td>-->
-<!--					<td>2019</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td><a href="https://www.maakindustrie.nl/nieuws/lucht-ruimtevaart/een-lift-naar-de-ruimte-is-dat-mogelijk/">Een lift naar de ruimte: is dat mogelijk?</a></td>-->
-<!--					<td>Maak Industrie Nieuws</td>-->
-<!--					<td>Interviewee</td>-->
-<!--					<td>2018</td>-->
-<!--				</tr>-->
-<!--				&lt;!&ndash; Add more rows as needed &ndash;&gt;-->
-<!--			</tbody>-->
-<!--		</table>-->
-
-
-
-<!--		</div>-->
-
-<!--	</section>-->
-	
-	<!-- services Section
-   ================================================== -->
-	<section id="software">
-
-		<div class="overlay"></div>
-
-		<div class="row section-intro">
-   		<div class="col-twelve">
-
-   			<h5>Software</h5>
-   			<h1>Open source</h1>
-
-   			<p class="lead">Below I listed a few public software packages that I maintain.</p>
-
-   		</div>
-   	</div> <!-- /section-intro -->
-
-   	<div class="row services-content">
-
-   		<div id="owl-slider" class="owl-carousel services-list">
-
-			<div class="service">
-
-				<span class="icon"><i class="fa fa-file"></i></span>
-
-				<div class="service-content">
-
-				 <h3>PILOT</h3>
-
-		            <p class="desc"> With the Pipeline for the International LOFAR Telescope (PILOT) you can reduce LOFAR data for sub-arcsecond resolution imaging. You can find the package <a href="https://github.com/LOFAR-VLBI/pilot">here</a>.
-	         		</p>
-
-	         	</div>
-			</div> <!-- /service -->
-
-			<div class="service">
-
-				<span class="icon"><i class="fa fa-file"></i></span>
-
-				<div class="service-content">
-
-				 <h3>Sidereal visibility averaging</h3>
-
-		            <p class="desc"> With this package you can average visibility data over sidereal days, to enable ultra-deep interferometric imaging for a much lower computing costs. You can find the package <a href="https://github.com/jurjen93/sidereal_visibility_avg">here</a>.
-	         		</p>
-
-	         	</div>
-
-
-
-				</div> <!-- /service -->
-
-				<div class="service">
-
-					<span class="icon"><i class="fa fa-file"></i></span>
-
-	            <div class="service-content">
-
-	            	<h3>LOFAR helpers</h3>
-
-                        <p class="desc">This package contains a collection of scripts to reduce radio interferometric data from the Low Frequency Array (LOFAR).
-						Some of these are implemented in other pipelines, such as the LOFAR VLBI pipeline (a.k.a. PILOT). You can find the code <a href="https://github.com/jurjen93/lofar_helpers">here</a>.
-	         		</p>
-
-	            </div>
-
-			</div> <!-- /service -->
-
-			   <div class="service">
-
-			   	<span class="icon"><i class="fa fa-play"></i></span>
-
-	            <div class="service-content">
-
-	            	<h3>Walk-through astronomy videos</h3>
-
-		            <p class="desc">
-						This code makes walk-through videos of radio images. You can find the code
-						<a href="https://github.com/jurjen93/advanced_astro_visualization">here</a> and a video that I created with it <a href="https://www.youtube.com/watch?v=nGKEGVBXMxk">here</a> that has been used for outreach.
-	        			</p>
-
-	            </div>
-
-			   </div> <!-- /service -->
-
-				<div class="service">
-
-					<span class="icon"><i class="fa fa-arrow-circle-right"></i></span>
-
-	            <div class="service-content">
-
-	            	<h3>Redshifting</h3>
-
-		            <p class="desc">For one of my projects, I wrote code to simulate how a radio galaxy appears if you move them to a higher redshift.
-                        This helps to correct for selection biases. You can	find the package <a href="https://github.com/jurjen93/redshifting">here</a>.
-					</p>
-
-	            </div>
-
-				</div> <!-- /service -->
-
-
-	      </div> <!-- /services-list -->
-
-   	</div> <!-- /services-content -->
-
-	</section> <!-- /services -->
-
-
-   <!-- contact
-   ================================================== -->
-	<section id="contact">
-
-		<div class="row section-intro">
-   		<div class="col-twelve">
-
-   			<h1>Contact</h1>
-   			<h3><p>Feel free to send me <a href="mailto:jurjong@proton.me">an email</a> if you want to get in touch.</p></h3>
-
-   			<p class="lead"></p>
-
-   		</div> 
-   	</div> <!-- /section-intro -->
-
-
-
-
-		
-	</section> <!-- /contact -->
-
-
-   <!-- footer
-   ================================================== -->
-
-   <footer>
-     	<div class="row">
-
-     		<div class="col-six tab-full pull-right social">
-
-     			<ul class="footer-social">        
-					<li><a href="https://github.com/jurjen93" class="fa fa-github" download title="My Github"></a></li>
-					<li><a href="https://www.linkedin.com/in/jurjendejong93/" class="fa fa-linkedin" download title="My LinkedIn"></a></li>
-					<li><a href="mailto:jurjong@proton.me" class="fa fa-envelope" download title="Email me"></a></li>
-			   </ul> 
-	      		
-	      </div>
-
-      	<div class="col-six tab-full">
-	      	<div class="copyright">
-		        	<span>Website designed based on a template by <a href="http://www.styleshout.com/">styleshout</a></span>	         	
-		         </div>		                  
-	      	</div>
-
-	      	<div id="go-top">
-		         <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
-		      </div>
-
-      	</div> <!-- /row -->     	
-   </footer>  
-
-   <div id="preloader"> 
-    	<div id="loader"></div>
-   </div> 
-
-   <!-- Java Script
-   ================================================== --> 
-   <script src="js/jquery-2.1.3.min.js"></script>
-   <script src="js/plugins.js"></script>
-   <script src="js/main.js"></script>
-
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="card">
+
+      <div class="item">
+        <div class="item-row">
+          <div class="item-left">
+            <span class="item-title"><b>Postdoc | PhD candidate</b></span>
+            <span class="item-sub">Leiden Observatory</span>
+          </div>
+          <div class="item-right"><span class="item-year">Jan 2021–<strong>Present</strong></span></div>
+        </div>
+        <div class="item-content">Developing techniques and strategies for LOFAR VLBI calibration and imaging with the aim to study radio galaxy evolution.
+							I was also a teaching assistant for the master course 'Radio Astronomy' and supervisor of several bachelor and master research projects.
+							From 2021 to 2024 in the role as PhD candidate and from 2025 until now as a postdoc.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-row">
+          <div class="item-left">
+            <span class="item-title"><b>Software Developer (part-time)</b></span>
+            <span class="item-sub">ASTRON</span>
+          </div>
+          <div class="item-right"><span class="item-year">Mar 2025–<strong>Present</strong></span></div>
+        </div>
+        <div class="item-content">As part of a collaboration between Leiden Observatory and ASTRON, I am developing tools and workflows for the LOFAR VLBI calibration and imaging pipeline.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-row">
+          <div class="item-left">
+            <span class="item-title"><b>Data Scientist</b></span>
+            <span class="item-sub">Matrixian Group</span>
+          </div>
+          <div class="item-right"><span class="item-year">Aug 2019–Jan 2021</span></div>
+        </div>
+        <div class="item-content">Developed machine learning pipelines, address validators, and APIs for various clients.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-row">
+          <div class="item-left">
+            <span class="item-title"><b>Mathematical Astronomer (Intern)</b></span>
+            <span class="item-sub">European Space Agency</span>
+          </div>
+          <div class="item-right"><span class="item-year">Sep 2019–Jan 2020</span></div>
+        </div>
+        <div class="item-content">Investigated patterns in stellar-distance data from Gaia DR2. This work resulted in a <a href="https://www.aanda.org/articles/aa/full_html/2020/10/aa37256-19/aa37256-19.html">publication in Astronomy & Astrophysics</a>.
+        Astrobites also wrote an article about <a href="https://astrobites.org/2020/10/01/template-post-3/">this work</a>.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-row">
+          <div class="item-left">
+            <span class="item-title"><b>Science Writer</b></span>
+            <span class="item-sub">Scientias</span>
+          </div>
+          <div class="item-right"><span class="item-year">Aug 2017–Jan 2020</span></div>
+        </div>
+        <div class="item-content">Wrote popular science articles about physics, mathematics, history, computing, and the space industry. You can find my articles <a href="https://scientias.nl/author/jurjen-de-jong/">here</a>.
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-row">
+          <div class="item-left">
+            <span class="item-title"><b>Mechanical Engineer (Intern)</b></span>
+            <span class="item-sub">EPPM, Tunisia</span>
+          </div>
+          <div class="item-right"><span class="item-year">Jun–Aug 2017</span></div>
+        </div>
+        <div class="item-content">Worked on automating calculations for determining stresses on lifting lugs.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-row">
+          <div class="item-left">
+            <span class="item-title"><b>Co-founder</b></span>
+            <span class="item-sub">Stamily</span>
+          </div>
+          <div class="item-right"><span class="item-year">Aug 2018–<strong>Present</strong></span></div>
+        </div>
+        <div class="item-content">Co-founded the non-profit Stamily, supporting people who stutter and served as first chair of the board.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card">
+      <div class="item">
+        <div class="item-row">
+          <div class="item-left">
+            <span class="item-title"><b>PhD Radio Astronomy</b></span>
+            <span class="item-sub">Leiden University (the Netherlands)</span>
+          </div>
+          <div class="item-right"><span class="item-year">2021–2025</span></div>
+        </div>
+        <div class="item-content">Studied galaxy cluster mergers and radio galaxy evolution and developed techniques for wide-field sub-arcsecond imaging with LOFAR.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-row">
+          <div class="item-left">
+            <span class="item-title"><b>Exchange – Chinese language and culture</b></span>
+            <span class="item-sub">National Cheng Kung University (Taiwan)</span>
+          </div>
+          <div class="item-right"><span class="item-year">2018-2018</span></div>
+        </div>
+        <div class="item-content">During the summer of 2018, I studied Chinese/Taiwanese culture and language with a scholarship from Leuven University.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-row">
+          <div class="item-left">
+            <span class="item-title"><b>MSc. Space Studies</b></span>
+            <span class="item-sub">KU Leuven (Belgium)</span>
+          </div>
+          <div class="item-right"><span class="item-year">2017–2018</span></div>
+        </div>
+        <div class="item-content">Studied various topics across the space industry, including space biology, law, technology, and science.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-row">
+          <div class="item-left">
+            <span class="item-title"><b>Exchange – Physics & Astronomy </b></span>
+            <span class="item-sub">Uppsala University (Sweden)</span>
+          </div>
+          <div class="item-right"><span class="item-year">2016–2017</span></div>
+        </div>
+        <div class="item-content">As part of the Erasmus+ exchange, I followed astronomy and physics courses as part of my master's degree in mathematics in Ghent.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-row">
+          <div class="item-left">
+            <span class="item-title"><b>MSc. Mathematics</b></span>
+            <span class="item-sub">Ghent University (Belgium)</span>
+          </div>
+          <div class="item-right"><span class="item-year">2015–2017</span></div>
+        </div>
+        <div class="item-content">Courses in applied/fundamental mathematics, astronomy, theoretical physics, and quantum computing. Thesis on applying the analytical Fox-H function to the Nuker Model.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-row">
+          <div class="item-left">
+            <span class="item-title"><b>BSc. Physics </b></span>
+            <span class="item-sub">Utrecht University (the Netherlands)</span>
+          </div>
+          <div class="item-right"><span class="item-year">2013–2015</span></div>
+        </div>
+        <div class="item-content">I completed courses about fundamental physics, including quantum mechanics, special relativity, advanced Newtonian mechanics, and more.
+        For my bachelor's thesis project, I analysed the Ganita-Yukti-Bhasa, originally written in Malayalam/Sanskriet.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-row">
+          <div class="item-left">
+            <span class="item-title"><b>BSc. Mathematics </b></span>
+            <span class="item-sub">Utrecht University (the Netherlands)</span>
+          </div>
+          <div class="item-right"><span class="item-year">2012-2015</span></div>
+        </div>
+        <div class="item-content">I focused on both fundamental mathematics and its applications in physics and astronomy. I also included
+        history and philosophy courses, which were part of the minor in history and philosophy of science.</div>
+      </div>
+    </div>
+
+  </section>
+
+<!-- Publications -->
+<section id="publications">
+  <h2 style="text-align:center; margin-bottom:40px;">First-authored publications</h2>
+
+  <div class="card">
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-title">
+          <b><a href="https://ui.adsabs.harvard.edu/abs/2025MNRAS.542.3253D/abstract">
+            Scalable and robust wide-field facet calibration with LOFAR's longest baselines
+          </a></b>
+        </span>
+        <span class="item-right">MNRAS | 2025</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-title">
+          <b><a href="https://books.gildeprint.nl/thesis/52689-deJong/">
+            PhD Thesis
+          </a></b>
+        </span>
+        <span class="item-right">Leiden University | 2025</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-title">
+          <b><a href="https://ui.adsabs.harvard.edu/abs/2025A%26A...694A..98D/abstract">
+            Unlocking ultra-deep wide-field imaging with sidereal visibility averaging
+          </a></b>
+        </span>
+        <span class="item-right">A&A | 2025</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-title">
+          <b><a href="https://ui.adsabs.harvard.edu/abs/2024arXiv240713247D/abstract">
+            Into the Depths: Unveiling ELAIS-N1 with LOFAR's deepest sub-arcsecond wide-field images
+          </a></b>
+        </span>
+        <span class="item-right">A&A | 2024</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-title">
+          <b><a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...683A..23D/abstract">
+            Cosmic evolution of FRI and FRII sources out to z=2.5
+          </a></b>
+        </span>
+        <span class="item-right">A&A | 2024</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-title">
+          <b><a href="https://ui.adsabs.harvard.edu/abs/2022A%26A...668A.107D/abstract">
+            Deep study of A399-401: Application of a wide-field facet calibration
+          </a></b>
+        </span>
+        <span class="item-right">A&A | 2022</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-row">
+        <span class="item-title">
+          <b><a href="https://ui.adsabs.harvard.edu/abs/2020A%26A...642A.205D/abstract">
+            Benford's law in the Gaia Universe
+          </a></b>
+        </span>
+        <span class="item-right">A&A | 2020</span>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Map -->
+<section id="map">
+  <h2>My travel map</h2>
+  <div class="card">
+    <iframe
+      src="maps/travel.html"
+      width="100%"
+      height="400"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <a href="mailto:jurjong@proton.me">Personal email</a><br><br>
+      <a href="mailto:jurjendejong@strw.leidenuniv.nl">Work email</a>
+    </div>
+  </section>
+
+  <footer>© 2026 Dr. Jurjen de Jong</footer>
+</main>
+</div>
+
+<script>
+// Sidebar toggle for mobile
+function toggleMenu(){ document.getElementById("nav").classList.toggle("show"); }
+// Collapsible items
+document.querySelectorAll('.item-row').forEach(item => {
+  item.addEventListener('click', () => {
+    const content = item.parentElement.querySelector('.item-content');
+    content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
+  });
+});
+</script>
 </body>
-
 </html>
