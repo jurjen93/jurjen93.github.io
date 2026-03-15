@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_04822005b28dc144ecfe83c34ba1b9f0 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_04822005b28dc144ecfe83c34ba1b9f0" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_04822005b28dc144ecfe83c34ba1b9f0 = L.map(
+                "map_04822005b28dc144ecfe83c34ba1b9f0",
+                {
+                    center: [54.526, 15.2551],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 3,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8a4b4f621d4fe5c1c2e65be37ba94959 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_8a4b4f621d4fe5c1c2e65be37ba94959.addTo(map_04822005b28dc144ecfe83c34ba1b9f0);
+        
+    
+            var feature_group_40b7f0185bd37c87328f99724b599da2 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_ab398073f17b381e8f3efe574e56c29b = L.circleMarker(
+                [54.666667, -1.75],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_40b7f0185bd37c87328f99724b599da2);
+        
+    
+            circle_marker_ab398073f17b381e8f3efe574e56c29b.bindTooltip(
+                `<div>
+                     <b>Durham, UK</b>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e7c302e47f9562c8e4d6499eb599a893 = L.circleMarker(
+                [54.9738474, -1.6131572],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_40b7f0185bd37c87328f99724b599da2);
+        
+    
+            circle_marker_e7c302e47f9562c8e4d6499eb599a893.bindTooltip(
+                `<div>
+                     <b>Newcastle, UK</b>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_08d161ac6d523e71abf44f35e0272c95 = L.circleMarker(
+                [55.9533456, -3.1883749],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_40b7f0185bd37c87328f99724b599da2);
+        
+    
+            circle_marker_08d161ac6d523e71abf44f35e0272c95.bindTooltip(
+                `<div>
+                     <b>Edinburgh, UK</b>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f818466803d25be310fe6053db17e169 = L.circleMarker(
+                [52.1594747, 4.4908843],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_40b7f0185bd37c87328f99724b599da2);
+        
+    
+            circle_marker_f818466803d25be310fe6053db17e169.bindTooltip(
+                `<div>
+                     <b>Leiden, the Netherlands</b>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4d1ab1f1301d7e094b23a75252951234 = L.circleMarker(
+                [52.1343369, 4.6561357],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_40b7f0185bd37c87328f99724b599da2);
+        
+    
+            circle_marker_4d1ab1f1301d7e094b23a75252951234.bindTooltip(
+                `<div>
+                     <b>Alphen aan de Rijn, the Netherlands</b>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_feb434cd6322608ae6376446ce02174b = L.circleMarker(
+                [51.9244424, 4.47775],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_40b7f0185bd37c87328f99724b599da2);
+        
+    
+            circle_marker_feb434cd6322608ae6376446ce02174b.bindTooltip(
+                `<div>
+                     <b>Rotterdam, the Netherlands</b>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1c4334d73ab6a66b52b6b669c5214fca = L.circleMarker(
+                [52.0749456, 4.2696802],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_40b7f0185bd37c87328f99724b599da2);
+        
+    
+            circle_marker_1c4334d73ab6a66b52b6b669c5214fca.bindTooltip(
+                `<div>
+                     <b>Den Haag, the Netherlands</b>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b241ef220e57ca2e5b09eee635de3577 = L.circleMarker(
+                [36.7213028, -4.4216366],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(feature_group_40b7f0185bd37c87328f99724b599da2);
+        
+    
+            circle_marker_b241ef220e57ca2e5b09eee635de3577.bindTooltip(
+                `<div>
+                     <b>Malaga, Spain</b>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_40b7f0185bd37c87328f99724b599da2.addTo(map_04822005b28dc144ecfe83c34ba1b9f0);
+        
+    
+            var layer_control_cccf1e2f008448e9c04af8e2c0117254_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_8a4b4f621d4fe5c1c2e65be37ba94959,
+                },
+                overlays :  {
+                    "\u003cbr\u003e \u0026nbsp; Places lived \u0026nbsp; \u003ci class=\"fa fa-map-marker fa-2x\" style=\"color:darkblue\"\u003e\u003c/i\u003e" : feature_group_40b7f0185bd37c87328f99724b599da2,
+                },
+            };
+            let layer_control_cccf1e2f008448e9c04af8e2c0117254 = L.control.layers(
+                layer_control_cccf1e2f008448e9c04af8e2c0117254_layers.base_layers,
+                layer_control_cccf1e2f008448e9c04af8e2c0117254_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_04822005b28dc144ecfe83c34ba1b9f0);
+
+        
+</script>
+</html>
