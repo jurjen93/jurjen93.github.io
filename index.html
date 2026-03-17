@@ -11,7 +11,7 @@
   --bg:#0f1116;
   --text:#e4e6eb;
   --sidebar:#161a22;
-  --accent:#e4e6eb;
+  --accent:#ffb6c1;
   --card:#1c212b;
   --muted:#7d8695;
 }
@@ -34,7 +34,7 @@ body {
 }
 
 .content a:hover {
-    color: #ff8fb0; /* pink on hover */
+    color: var(--accent); /* pink on hover */
 }
 
 /* Optional: ensure the main content doesn’t overflow on small screens */
@@ -88,12 +88,12 @@ nav a:hover{ color:var(--accent); }
 }
 
 .buttons a:hover {
-    color: #ffb6c1;
+    color: var(--accent);
 }
 
 /* Collapsible cards titles */
 .item-row:hover .item-title {
-    color: #ffb6c1;
+    color: var(--accent);
 }
 
 
@@ -142,7 +142,7 @@ footer{ margin-top:80px; color:var(--muted); font-size:14px; text-align:center; 
 .menu-toggle{ display:none; font-size:26px; cursor:pointer; margin-bottom:10px; }
 @media(max-width:900px){
   .container{ flex-direction:column; }
-  .sidebar{ position:relative; width:100%; height:auto; padding:20px; }
+  .sidebar{ position:relative; width:85%; height:auto; padding:20px; }
   .profile img{ width:80px; }
   .menu-toggle{ display:block; text-align:right; }
   nav{ display:none; margin-top:15px; }
