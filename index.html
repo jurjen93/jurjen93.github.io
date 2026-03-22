@@ -4,161 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dr. Jurjen de Jong</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-<style>
-:root{
-  --bg:#0f1116;
-  --text:#e4e6eb;
-  --sidebar:#161a22;
-  --accent:#ffb6c1;
-  --card:#1c212b;
-  --muted:#7d8695;
-}
-body {
-    margin: 0;
-    font-family: 'Inter', sans-serif; /* or 'Merriweather', serif */
-    color: var(--text);
-    background: linear-gradient(rgba(15,17,22,0.85), rgba(15,17,22,0.85)), url("images/bg.jpg") no-repeat center top;
-    background-size: cover;
-    background-attachment: scroll; /* important for mobile! */
-}
 
-/* Main content links: default white, hover pink */
-.content a:link,
-.content a:visited,
-.content a:active {
-    color: var(--text); /* white-ish text */
-    text-decoration: none;
-    transition: color 0.3s;
-}
+<link rel="stylesheet" href="css/style.css">
 
-.content a:hover {
-    color: var(--accent); /* pink on hover */
-}
-
-/* Optional: ensure the main content doesn’t overflow on small screens */
-.content {
-    margin-left: 270px;
-    padding: 60px;
-    max-width: 950px;
-}
-
-@media (max-width: 900px) {
-    .content {
-        margin-left: 0;
-        padding: 30px 20px;
-    }
-    .hero {
-        height: 200px;
-        font-size: 24px;
-    }
-}
-
-.item-year {
-    font-size: 14px;
-}
-
-
-
-/* Make 'Present' bold */
-.item-year::after {
-    content: '';
-}
-.item-year strong {
-    font-weight: 700;
-}
-
-/* Sidebar */
-.sidebar{ width:270px; height:100vh; background:var(--sidebar); position:fixed; padding:40px 30px; display:flex; flex-direction:column; justify-content:space-between; }
-.profile{text-align:center;}
-.profile img{ width:120px; border-radius:50%; margin-bottom:15px; }
-.profile h1{ font-size:22px; margin:5px 0; }
-.profile p{ font-size:14px; color:var(--muted); }
-nav{ margin-top:30px; }
-nav a{ display:block; padding:8px 0; text-decoration:none; color:var(--text); font-weight:500;}
-nav a:hover{ color:var(--accent); }
-.buttons{ margin-top:20px; text-align:center; }
-.buttons a{ display:inline-block; color:var(--text); text-decoration:none; font-size:14px; margin:4px 6px; }
-.buttons a:hover{ color:var(--accent); }
-
-/* Buttons / social links */
-.buttons a {
-    transition: color 0.3s;
-}
-
-.buttons a:hover {
-    color: var(--accent);
-}
-
-/* Collapsible cards titles */
-.item-row:hover .item-title {
-    color: var(--accent);
-}
-
-
-/* Sidebar stays untouched */
-.sidebar nav a {
-    color: var(--text); /* default sidebar text */
-    transition: color 0.3s;
-}
-
-.sidebar nav a:hover {
-    color: var(--accent); /* original accent on hover */
-}
-
-/* Content */
-.content{
-    margin-left:270px;
-    padding:60px;
-    max-width:950px;
-}
-
-section{
-    margin-bottom:60px;
-    text-align:center;
-}
-
-h2{
-    margin-bottom:30px;
-    font-weight:600;
-}
-
-/* Cards */
-.card{ background:var(--card); padding:25px; border-radius:12px; max-width:800px; margin:0 auto; text-align:left; }
-.item{ margin-bottom:20px; }
-.item-row{ display:flex; justify-content:space-between; align-items:flex-start; cursor:pointer; }
-.item-left{ flex:1; }
-.item-right{ flex-shrink:0; text-align:right; color:var(--muted); font-size:14px; margin-left:20px; }
-.item-title{ font-weight:600; }
-.item-sub{ font-size:14px; color:var(--muted); display:block; margin-top:2px; }
-.item-content{ max-height:0; overflow:hidden; transition:max-height 0.35s ease; margin-top:5px; font-size:14px; }
-.item-row:hover .item-title{ color:var(--accent); }
-
-/* Footer */
-footer{ margin-top:80px; color:var(--muted); font-size:14px; text-align:center; }
-
-/* Mobile */
-.menu-toggle{ display:none; font-size:26px; cursor:pointer; margin-bottom:10px; }
-@media(max-width:900px){
-  .container{ flex-direction:column; }
-  .sidebar{ position:relative; width:85%; height:auto; padding:20px; }
-  .profile img{ width:80px; }
-  .menu-toggle{ display:block; text-align:right; }
-  nav{ display:none; margin-top:15px; }
-  nav.show{ display:block; }
-  .content{ margin-left:0; padding:30px 20px; }
-  .hero{ height:200px; font-size:24px; }
-  .card{ padding:20px; }
-}
-</style>
-
-<!-- Favicon using PNG -->
 <link rel="icon" type="image/png" sizes="32x32" href="images/jurjen.png">
-
-<!-- Optional: For older browsers -->
 <link rel="shortcut icon" href="images/jurjen.png">
-
 </head>
 <body>
 <div class="container">
@@ -174,10 +27,10 @@ footer{ margin-top:80px; color:var(--muted); font-size:14px; text-align:center; 
     </div>
     <nav id="nav">
       <a href="#about">About</a>
-      <a href="#experience">Experience</a>
+      <a href="#experience">Career</a>
       <a href="#education">Education</a>
       <a href="#publications">Publications</a>
-      <a href="#map">Travel map</a>
+      <a href="travels.html">Travelling</a>
       <a href="#contact">Contact</a>
 
     </nav>
@@ -198,18 +51,25 @@ footer{ margin-top:80px; color:var(--muted); font-size:14px; text-align:center; 
   <section id="about">
     <h2>About</h2>
     <div class="card">
-			I am a researcher at <a href="https://www.universiteitleiden.nl/en/science/astronomy">Leiden Observatory</a> and <a href="https://www.astron.nl/">ASTRON</a>.
-                My work focuses on developing and improving data-reduction strategies
-                and techniques for automated processing of radio interferometric data from the European <a href="https://www.astron.nl/telescopes/lofar/">LOw Frequency ARray (LOFAR)</a> to produce wide-field
-                sub-arcsecond resolution images on HPC clusters. Scientifically, I am also
-                interested in studying the cosmic evolution of radio galaxies and the mergers of galaxy clusters.
-
+Welcome! I'm Jurjen. I work as a radio astronomer and software developer at
+<a href="https://www.universiteitleiden.nl/en/science/astronomy">Leiden Observatory</a> and
+<a href="https://www.astron.nl/">ASTRON</a>, where I focus on developing and improving data-reduction strategies
+and automated techniques for processing radio interferometric data. I am currently focusing on improving pipelines for the European
+<a href="https://www.astron.nl/telescopes/lofar/">LOw Frequency ARray (LOFAR)</a> to produce wide-field
+high-resolution images on HPC clusters. My research also explores the cosmic evolution of radio galaxies
+and energetic phenomena like galaxy cluster mergers.
+<p>
+Beyond astronomy, I am a co-founder of
+<a href="https://www.stamily.org">Stamily</a>, a platform created for and by people who stutter, supporting
+connection and community for people who stutter around the world.
+I also enjoy travelling. You can find more about that <a href="travels.html">here</a>.
+</p>
     </div>
   </section>
 
   <!-- Experience -->
   <section id="experience">
-    <h2>Experience</h2>
+    <h2>Career</h2>
     <div class="card">
 
       <div class="item">
@@ -466,22 +326,6 @@ footer{ margin-top:80px; color:var(--muted); font-size:14px; text-align:center; 
 
   </div>
 
-</section>
-
-<!-- Map -->
-<section id="map">
-  <h2>Travel map</h2>
-  <div class="card">
-    <iframe
-      src="maps/travel.html"
-      width="100%"
-      height="400"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
 </section>
 
   <!-- Contact -->
