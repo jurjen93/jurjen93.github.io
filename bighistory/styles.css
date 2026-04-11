@@ -150,39 +150,109 @@ h3 {
     border-top: 1px solid #374151;
 }
 
+.back{
+  display:inline-block;
+  margin-bottom:30px;
+  text-decoration:none;
+  color:var(--muted);
+}
+
+.back:hover{
+  color:var(--accent);
+}
+
 /* ===================== */
 /* MOBILE: SCALE VERSION */
+/* ===================== */
+
+/* ===================== */
+/* MOBILE: RESPONSIVE    */
 /* ===================== */
 
 @media (max-width: 768px) {
 
     body {
-        overflow-x: auto;
-        padding: 40px 0;
+        overflow-x: hidden;
+        padding: 40px 15px;
         text-align: center;
     }
 
-    /* Header perfectly centred */
+    /* Header */
     .header {
-        width: 100%;
-        margin: 0 auto 60px auto;
-        padding: 0 20px;
-        box-sizing: border-box;
+        margin-bottom: 50px;
+        padding: 0 10px;
     }
 
-    .header h1,
+    .header h1 {
+        font-size: 2rem;
+    }
+
     .header p {
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
+        font-size: 0.95rem;
     }
 
-    /* 🔥 Properly centred scaled timeline */
+    /* Timeline container */
     .timeline-container {
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%) scale(0.65);
-        transform-origin: top center;
-        width: 1000px;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    /* Vertical line */
+    .timeline-container::after {
+        left: 20px;
+        width: 2px;
+    }
+
+    /* Event cards */
+    .event-card {
+        width: 100%;
+        padding: 20px 20px 20px 60px;
+        box-sizing: border-box;
+        text-align: left;
+        left: 0 !important;
+    }
+
+    /* Remove alternating layout */
+    .event-card:nth-child(odd),
+    .event-card:nth-child(even) {
+        left: 0;
+        text-align: left;
+    }
+
+    /* 🔥 PERFECTLY aligned dots */
+    .event-card::after,
+    .event-card:nth-child(even)::after {
+        left: 20px;
+        transform: translateX(-50%);
+        right: auto;
+    }
+
+    /* Content */
+    .content {
+        padding: 18px;
+        border-radius: 12px;
+    }
+
+    /* Text fixes */
+    h3 {
+        font-size: 1.15rem;
+    }
+
+    .date {
+        font-size: 0.9rem;
+    }
+
+    .extra-info {
+        font-size: 0.9rem;
+        text-align: left;
+    }
+
+    /* Prevent overflow issues */
+    .content,
+    .extra-info {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 }
