@@ -40,6 +40,10 @@ body {
   color: var(--accent);
 }
 
+.custom-link {
+    color: var(--accent);
+}
+
 /* =========================
    LAYOUT
 ========================= */
