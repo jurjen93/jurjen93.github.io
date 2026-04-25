@@ -139,7 +139,7 @@ h3 {
     transition: max-height 0.5s ease, opacity 0.4s ease;
     font-size: 0.95rem;
     color: #d1d5db;
-    text-align: left;
+    text-align: justify;
 }
 
 .event-card.active .extra-info {
@@ -246,7 +246,7 @@ h3 {
 
     .extra-info {
         font-size: 0.9rem;
-        text-align: left;
+        text-align: justify;
     }
 
     /* Prevent overflow issues */

@@ -134,7 +134,9 @@ nav{ margin-top:30px; }
   border-radius:12px;
   max-width:800px;
   margin:0 auto;
-  text-align:left;
+  text-align:justify;
+  line-height: 1.2;
+  max-width: 80ch;
 }
 
 .item{ margin-bottom:20px; }
