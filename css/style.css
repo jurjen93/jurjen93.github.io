@@ -429,3 +429,8 @@ footer{
     padding:20px;
   }
 }
+
+.research-page .item p {
+  text-align: justify;
+  hyphens: auto;
+}
